@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <author>Ржевский Дмитрий</author>
+        <title>Установка Maven</title>
+    </properties>
+    <meta name="keyword" content="java, maven 3, install, установка "/>
+    <body>
+        <section name="Установка">
+            <p>
+                <li>
+                Зайдите на официальный сайт мавен
+                в раздел <a href="http://maven.apache.org/download.html">загрузка</a> и скачайте последнюю стабильную версию.
+                </li>
+                <li>
+                    Распакуйте архив   в инсталляционную директорию. Например в C:\Program Files\maven\ в Windows или /usr/share/maven в Linux
+                </li>
+                <li>
+                    Установите переменную окружения M2_HOME:
+                    В Windows зайдите "Мой компьютер"-->Управление -->Дополнительно --> Переменные окружения    и там добавьте   "M2_HOME" и   " C:\Program Files\maven\"  .
+                    В Linux можно добавить строку "export M2_HOME=/usr/share/maven"в файл /etc/profile .
+                </li>
+                <li>
+                    Установите переменную окружения PATH
+                    В Windows в переменной PATH добавьте к списку директорий строку %M2_HOME/bin%".
+                    В Linux можно добавить строку "export PATH=$PATH:$M2_HOME/bin"в файл /etc/profile .
+
+                </li>
+                <li>
+                    Проверьте корректность установки набрав в командной строке <br/>
+                    <source>mvn -version</source>
+                    Если результат примерно такой
+
+                    <source>
+                        dima@myhost ~ $ mvn -version
+                        Apache Maven 2.2.1 (r801777; 2009-08-06 23:16:01+0400)
+                        Java version: 1.6.0_18
+                        Java home: /opt/icedtea6-bin-1.8.1/jre
+                        Default locale: en_US, platform encoding: ANSI_X3.4-1968
+                        OS name: "linux" version: "2.6.34-gentoo-r6" arch: "amd64" Family: "unix
+                    </source>                    
+                    то поздравляю, вы успешно установили Maven.
+                </li>
+
+            </p>
+        </section>
+    </body>
+</document>

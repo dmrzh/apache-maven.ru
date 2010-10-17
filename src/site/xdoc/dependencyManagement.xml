@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>Управление зависимостями в Maven</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="java, maven, ant, about, ява, мавен"/>
+        <title>Управление зависимостями в Maven</title>
+    </head>
+
+
+    <body>
+        <section name="Зваисимости">
+        </section>
+        <section name="Транзитивные зависимости">
+        </section>
+        <section name="Разрешение версий">
+        </section>
+        <section name="scope">
+        </section>
+    </body>
+</document>

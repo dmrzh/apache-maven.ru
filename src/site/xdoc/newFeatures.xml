@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <author>Ржевский Дмитрий</author>
+        <title>Что нового в Maven 3</title>
+    </properties>
+    <meta name="keyword" content="java, maven 3, new features, новая функциональнасть "/>
+    <body>
+        <section name="Лучшая интеграция со средами разработки">
+        <p>
+
+        </p>
+        </section>
+        <section name="Polyglot Maven - pom.xml на разных языках">
+            <p>
+                Poliglot Maven <a href="http://polyglot.sonatype.org/">http://polyglot.sonatype.org/</a> - попытка использовать другие языки (Ruby Groovy Scala Clojure) для описания проекта вместо  pom.xml. И действительно описание на pom.xml получается довольно объёмистым. Описание на groovy очень похоже на  pom.xml, описание на  Scala и Clojure выглядит компактно.
+                Poliglot Maven - отдельный проект и в дистрибутив maven3 он не входит.
+                Будем смотреть дальше как будут развиваться этот проект.                       
+            </p>
+        </section>
+          <section name="Maven shell.">
+            <p>
+                      <a href="http://shell.sonatype.org/">Командная строка maven </a>.  Java приложение которое перенаправляет все введённые комманды
+                операционной системе, но если вызывается maven этот вызов не перенаправляется а исполняется. Позволяет ускорить сборку.   
+            </p>
+        </section>
+         <section name="Рефакторинг.">
+            <p>
+                       
+            </p>
+        </section>
+    </body>
+</document>

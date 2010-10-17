@@ -1,0 +1,59 @@
+<project name="Руководство по Maven" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+    <bannerLeft>
+        <name>maven3</name>
+        <src>images/apache-maven-project-2.png</src>
+        <href>http://www.maven3.ru/</href>
+    </bannerLeft>
+    <bannerRight>
+        <src>images/maven-logo-2.gif</src>
+    </bannerRight>
+
+    <skin>
+        <groupId>ru.maven3</groupId>
+        <artifactId>maven-ru-skin</artifactId>
+        <version>1.0</version>
+    </skin>
+
+
+    <body>
+        <links>
+            <item name="maven.apache.org" href="http://maven.apache.org/"/>
+             <item name="log4j.ru" href="http://www.log4j.ru/"/>
+             <item name="Ржевский Дмитрий" href="http://www.rzhevskiy.info/"/>
+
+        </links>
+
+        <menu name="О Maven">
+            <item name="Что такое Maven и для чего нужен" href="index.html"/>
+            <item name="Установка" href="install.html"/>
+            <item name="Начало" href="quick_start.html"/>
+            <item name="Файл проекта pom.xml" href="project-file.html"/>
+
+            <item name="Управление зависимостями" href="dependencyManagement.html"/>
+            <item name="жизненый цикл сборки: фазы сборки" href="lifecycle.html"/>
+            <item name="Дополнительные настройки" href="optionalSettings.html"/>
+
+
+        </menu>
+        <menu name="Maven 3">
+            <item name="Что нового в Maven 3" href="newFeatures.html"/>
+            <item name="Ссылки" href="links.html"/>
+        </menu>
+        <menu name="Плагины">
+            <item name="maven-archetype-plugin"    href="http://maven.apache.org/archetype/maven-archetype-plugin/index.html"/>
+            <item name="maven-site-plugin"    href="http://developers-blog.org/blog/default/2009/11/27/Maven-Site-Example"/>
+            <item name="maven-source-plugin"    href="http://maven.apache.org/plugins/maven-source-plugin/index.html"/>
+            <item name="maven-javadoc-plugin"    href="http://maven.apache.org/plugins/maven-javadoc-plugin/l"/>
+
+        </menu>
+    </body>
+
+    <poweredBy>
+        <logo name="Maven" href="http://maven.apache.org/"
+              img="http://maven.apache.org/images/logos/maven-feather.png"/>
+    </poweredBy>
+
+
+</project>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+    <properties>
+        <title>Начало работы</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+    <head>
+        <meta name="keyword" content="java, maven 3, quick start, начало работыб руководство, пример, "/>
+        <title>Начало работы</title>
+    </head>
+    <body>
+        <section name="Простой пример">
+            <p>
+                Давайте создадим новый проект. Для этого выполним комманду:
+            </p>
+            <p>
+                <source> mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes  -DarchetypeArtifactId=maven-archetype-quickstart </source>
+            </p>
+            <p>
+                это комманда спросит, его
+                <i>groupId</i>
+                и
+                <i>artifcactId</i>
+                введите данные:
+                <br/>
+                <i>ru.maven3</i>
+                <br/>
+                <i>testproject1</i>
+                <br/>
+
+            </p>
+
+            <p>
+                В результате сгенерируется проект со стандартной структурой директорий
+                <br/>
+                <pre>
+                            testproject1
+                            |-- pom.xml
+                            `-- src
+                                |-- main
+                                |   `-- java
+                                |       `--ru
+                                |           `-- maven3
+                                |                   `-- App.java
+                                `-- test
+                                    `-- java
+                                        `-- ru
+                                            `-- maven3
+                                                    `-- AppTest.java
+        </pre>
+            </p>
+            <p>
+                с примером приложения и с JUnit тестом для этого приложения.
+                pom.xml - это как раз файл для maven. Его мы будем рассматривать отдельно более подробно.
+
+            </p>
+            <p>
+                чтобы скомпилировать, запустить junit тесы и собрать jar нужно набрать
+                mvn package
+                Если в консоль выведется
+                <source>
+                    ...
+                    [INFO] BUILD SUCCESS
+                    .....
+                </source>
+                то сборка прошла успешно и создастся директория target, в нём будет jar c нашей программой:
+                testproject1-1.0-SNAPSHOT.jar
+            </p>
+        </section>
+        <section name="Интеграция">
+
+            <p>
+
+                Хочу обратить внимание, что полученный проект можно сразу открывать средой разработки:
+                <br/>
+
+                <ul>
+                    <li>для среды IntelliJ Idea и NetBeans - проект открывается сразу ("File/OpenProject" или
+                        "Файл/Создать проект/Проект maven с существующим POM")
+                    </li>
+                    <li>Для в eclipse нужно установить соответствующие плагин.(например <a href="http://code.google.com/p/q4e/">http://code.google.com/p/q4e/</a>)
+                    </li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</document>

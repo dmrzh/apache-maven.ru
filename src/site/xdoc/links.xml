@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>Ссылки</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="java, maven, ant, about, ява, мавен, links, ссылки"/>
+        <title>Ссылки</title>
+    </head>
+    <body>
+        <section name="На русском языке">
+            <p>
+                <a href="http://www.ibm.com/developerworks/ru/edu/j-mavenv2/">Введение в Apache Maven 2</a>
+                <br/>
+            </p>
+        </section>
+        <section name="На английском языке">
+            <p>
+                <a href="http://maven.apache.org/">Основной сайт</a>
+                <br/>
+                <a href="http://www.ibm.com/developerworks/java/library/j-5things13/index.html">5 things you didn't know
+                    about ... Apache Maven
+                </a>
+                <br/>
+            </p>
+        </section>
+         <section name="Полезные инструменты">
+            <p>
+                  <a href="http://mavenrepository.com/"> http://mavenrepository.com/</a> - позволяет по названию библиотеки найти groupId и artifactId.<br/>
+                    <a href="http://findjar.com/">http://findjar.com/ </a> по полному имени находит jar файл где есть такой класс.
+
+                </p>
+        </section>
+
+    </body>
+</document>
+
+
