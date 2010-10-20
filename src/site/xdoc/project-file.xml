@@ -15,6 +15,105 @@
 
     <body>
         <section name="Что такое pom.xml">
+            <p>
+           pom.xml - это основной файл который описывает проект.
+                Вообще могут быть дополнительные файлы, но они играют второстепенную роль.
+
+        </p>
          </section>
+        <section name="Корневой элементl">
+            <p>
+
+            Давайте резберём из чего состоит файл pom.xml
+1) Корневой элемент и заголовок.
+                <source>
+            <![CDATA[
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  .............
+</project>
+  ]]>
+                </source>
+         Корневой элемент  <![CDATA[ <project>]]>, схема,
+                которая облегчает редактирование и проверку, и версия POM.
+</p>
+            <p>
+            Внутри тэга project содержится основная и обязательноая информация о проекте:
+      <source>
+<![CDATA[
+  <!-- The Basics -->
+  <groupId>...</groupId>
+  <artifactId>...</artifactId>
+  <version>...</version>
+]]>
+   </source>
+
+    В Maven каждый проект идентифицируется парой groupId    artifactId.
+                Во избежание конфликта имён,  groupId -
+    наименование организации или подразделения и обычно действуют такие же правила как и при именовании пакетов в Java - записывают доменное имя организации или сайта проекта.
+
+                 artifactId - название проекта.   Внутри тэга version как можно догадаться хранится версия проекта.
+                Тройкой  groupId, artifactId, version можно однозначно идентифицировать jar файл приложения или библиотеки.
+                Если состояние кода для проекта не зафиксированно, то в конце к имени версии добавляется "-SNAPSHOT" что обозначает что версия в разработке и результирующий jar файл может меняться.   
+
+                <packaging>...</packaging>   определяет какого типа файл будет созбаваться как результат сборки. Возможные варианты pom, jar, war, ear
+                  <parent>...</parent>
+
+             </p>
+            </section>
+        <section name="Зависимости">
+            <p>
+
+                Зависимости - следующая очень важная часть pom.xml - тут храниться список  всех библиотек
+                (зависимостей) которые используюся в проекте.    Каждая библиотека идентифицируется
+                также   как и сам проект - тройкой  groupId, artifactId, version.
+                Объявление зависимостей заключено в тэг  <![CDATA[ <dependencies>...</dependencies>]]>.
+                Давайте лучше рассмотрим на примере проекта <a href="http://repo1.maven.org/maven2/org/testng/testng/5.9/testng-5.9.pom">testng</a>
+                <source>
+                    <![CDATA[
+                  <dependencies>
+                      <dependency>
+                            <groupId>ant</groupId>
+                            <artifactId>ant</artifactId>
+                            <version>1.6.5</version>
+                            <optional>true</optional>
+                      </dependency>
+                    <dependency>
+                            <groupId>junit</groupId>
+                            <artifactId>junit</artifactId>
+                            <version>3.8.1</version>
+                    </dependency>
+                    <dependency>
+                            <groupId>qdox</groupId>
+                            <artifactId>qdox</artifactId>
+                            <version>1.6.1</version>
+                            <scope>provided</scope>
+                    </dependency>
+                    <dependency>
+                            <groupId>org.beanshell</groupId>
+                            <artifactId>bsh</artifactId>
+                            <version>2.0b4</version>
+                            <scope>provided</scope>
+                    </dependency>
+                </dependencies>
+                ]]>
+
+                </source>
+
+                Далее и
+
+
+     <source>
+          <dependencyManagement>...</dependencyManagement>
+          <modules>...</modules>
+          <properties>...</properties>
+   </source>
+
+
+            </p>
+        </section>
         </body>
     </document>

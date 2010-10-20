@@ -13,7 +13,13 @@
         </section>
         <section name="Polyglot Maven - pom.xml на разных языках">
             <p>
-                Poliglot Maven <a href="http://polyglot.sonatype.org/">http://polyglot.sonatype.org/</a> - попытка использовать другие языки (Ruby Groovy Scala Clojure) для описания проекта вместо  pom.xml. И действительно описание на pom.xml получается довольно объёмистым. Описание на groovy очень похоже на  pom.xml, описание на  Scala и Clojure выглядит компактно.
+                Poliglot Maven <a href="http://polyglot.sonatype.org/">http://polyglot.sonatype.org/</a> - попытка
+                использовать другие языки (<a href="http://www.ruby-lang.org/">Ruby</a>
+                <a href="http://groovy.codehaus.org/">Groovy</a>
+                <a href="http://www.scala-lang.org/">Scala</a>
+                <a href="http://clojure.org/">Clojure</a>) для описания проекта вместо  pom.xml.
+                И действительно описание на pom.xml получается довольно объёмистым.
+                Описание на groovy очень похоже на  pom.xml, описание на  Scala и Clojure выглядит компактно.
                 Poliglot Maven - отдельный проект и в дистрибутив maven3 он не входит.
                 Будем смотреть дальше как будут развиваться этот проект.                       
             </p>
@@ -29,5 +35,5 @@
                        
             </p>
         </section>
-    </body>
+    </body>    
 </document>
