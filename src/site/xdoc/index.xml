@@ -8,7 +8,7 @@
     </properties>
 
     <head>
-        <meta name="keyword" content="java, maven, ant, about, ява, мавен"/>
+        <meta name="keyword" content="java, maven, ant, about, ява, мавен, ьфмут"/>
         <title>Что такое Maven3</title>
     </head>
 
@@ -26,7 +26,7 @@
             <p>
                 Для платформы Java существуют два основных инструмента для сборки:
                 <a href="http://ant.apache.org/">Ant</a>
-                и<a
+                и <a
                     href="http://maven.apache.org/">Maven</a>.
             </p>
         </section>
