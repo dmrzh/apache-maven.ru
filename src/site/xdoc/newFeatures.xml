@@ -14,9 +14,9 @@
         <section name="Polyglot Maven - pom.xml на разных языках">
             <p>
                 Poliglot Maven <a href="http://polyglot.sonatype.org/">http://polyglot.sonatype.org/</a> - попытка
-                использовать другие языки (<a href="http://www.ruby-lang.org/">Ruby</a>
-                <a href="http://groovy.codehaus.org/">Groovy</a>
-                <a href="http://www.scala-lang.org/">Scala</a>
+                использовать другие языки (<a href="http://www.ruby-lang.org/">Ruby</a> ,
+                <a href="http://groovy.codehaus.org/">Groovy</a>,
+                <a href="http://www.scala-lang.org/">Scala</a>,
                 <a href="http://clojure.org/">Clojure</a>) для описания проекта вместо  pom.xml.
                 И действительно описание на pom.xml получается довольно объёмистым.
                 Описание на groovy очень похоже на  pom.xml, описание на  Scala и Clojure выглядит компактно.
@@ -32,7 +32,7 @@
         </section>
          <section name="Рефакторинг.">
             <p>
-                       
+                   Основной результат рефакторинга -  уменьшение размера дистрибутива и ускоренее работы всей системы.   
             </p>
         </section>
     </body>    

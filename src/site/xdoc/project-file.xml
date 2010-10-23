@@ -60,9 +60,23 @@
                 Если состояние кода для проекта не зафиксированно, то в конце к имени версии добавляется "-SNAPSHOT" что обозначает что версия в разработке и результирующий jar файл может меняться.   
 
                 <packaging>...</packaging>   определяет какого типа файл будет созбаваться как результат сборки. Возможные варианты pom, jar, war, ear
-                  <parent>...</parent>
+
 
              </p>
+            <p>Давайте лучше рассмотрим на примере проекта <a href="http://mirrors.ibiblio.org/pub/mirrors/maven2/org/powermock/powermock-core/1.4.6/powermock-core-1.4.6.pom">powermock-core</a>
+                <b>groupId</b> - org.powermock,
+                <b>artifactId</b> - powermock-core ,
+                <b>version</b> - 1.4.6
+            </p>
+
+            <p>
+                Также добавляется информация которая не используется самим мавеном но нужна для программиста чтобы понять о чём этот проект:<br/>
+                <ul>
+                    <li> <![CDATA[<name>powermock-core</name> название проекта для человека]]></li>
+                    <li> <![CDATA[<description>PowerMock core functionality.</description> Описание проекта]]></li>
+                    <li> <![CDATA[<url>http://www.powermock.org</url>  сайт проекта.]]></li>
+                  </ul>
+            </p>
             </section>
         <section name="Зависимости">
             <p>
@@ -71,34 +85,29 @@
                 (зависимостей) которые используюся в проекте.    Каждая библиотека идентифицируется
                 также   как и сам проект - тройкой  groupId, artifactId, version.
                 Объявление зависимостей заключено в тэг  <![CDATA[ <dependencies>...</dependencies>]]>.
-                Давайте лучше рассмотрим на примере проекта <a href="http://repo1.maven.org/maven2/org/testng/testng/5.9/testng-5.9.pom">testng</a>
+
                 <source>
                     <![CDATA[
-                  <dependencies>
-                      <dependency>
-                            <groupId>ant</groupId>
-                            <artifactId>ant</artifactId>
-                            <version>1.6.5</version>
-                            <optional>true</optional>
-                      </dependency>
-                    <dependency>
+                <dependencies>
+                        <dependency>
                             <groupId>junit</groupId>
                             <artifactId>junit</artifactId>
-                            <version>3.8.1</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>qdox</groupId>
-                            <artifactId>qdox</artifactId>
-                            <version>1.6.1</version>
-                            <scope>provided</scope>
-                    </dependency>
-                    <dependency>
-                            <groupId>org.beanshell</groupId>
-                            <artifactId>bsh</artifactId>
-                            <version>2.0b4</version>
-                            <scope>provided</scope>
-                    </dependency>
-                </dependencies>
+                            <version>4.4</version>
+                            <scope>test</scope>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.powermock</groupId>
+                            <artifactId>powermock-reflect</artifactId>
+                            <version>${version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.javassist</groupId>
+                            <artifactId>javassist</artifactId>
+                            <version>3.13.0-GA</version>
+                            <scope>compile</scope>
+                        </dependency>
+                    </dependencies>
+
                 ]]>
 
                 </source>
@@ -107,9 +116,23 @@
 
 
      <source>
-          <dependencyManagement>...</dependencyManagement>
-          <modules>...</modules>
-          <properties>...</properties>
+          <![CDATA[
+         <build>
+                 <plugins>
+                     <plugin>
+                         <groupId>org.apache.maven.plugins</groupId>
+                         <artifactId>maven-jar-plugin</artifactId>
+                         <configuration>
+                             <archive>
+                                 <manifest>
+                                     <addClasspath>true</addClasspath>
+                                 </manifest>
+                             </archive>
+                         </configuration>
+                     </plugin>
+                 </plugins>
+             </build>
+                    ]]>
    </source>
 
 
