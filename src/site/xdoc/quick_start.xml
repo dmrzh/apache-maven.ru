@@ -14,13 +14,13 @@
     <body>
         <section name="Простой пример">
             <p>
-                Давайте создадим новый проект. Для этого выполним комманду:
+                Давайте создадим новый проект. Для этого выполним команду:
             </p>
             <p>
                 <source> mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes  -DarchetypeArtifactId=maven-archetype-quickstart </source>
             </p>
             <p>
-                это комманда спросит, его
+                это команда спросит, его
                 <i>groupId</i>
                 и
                 <i>artifcactId</i>
