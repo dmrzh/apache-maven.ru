@@ -41,7 +41,7 @@
                 которая облегчает редактирование и проверку, и версия POM.
 </p>
             <p>
-            Внутри тэга project содержится основная и обязательноая информация о проекте:
+            Внутри тэга project содержится основная и обязательная информация о проекте:
       <source>
 <![CDATA[
   <!-- The Basics -->
@@ -111,31 +111,43 @@
                 ]]>
 
                 </source>
-
-                Далее и
+           </p>
+        </section>
+           <section name="Тэг &lt;build">
+            <p>
+                
+               Тэг &lt;build не обязательный т. к. существуют значения по умолчанию. Этот раздел содержит информацию по самой сборке: где находятся исходные файлы, где ресурсы,
+                какие плагины используются. Например:
 
 
      <source>
           <![CDATA[
          <build>
+         <sourceDirectory>src/java</sourceDirectory>
+            <resources>
+                <resource>
+                    <directory>${basedir}/src/java</directory>
+                    <includes>
+                    <include>**/*.properties</include>
+                    </includes>
+                </resource>
+            </resources>
                  <plugins>
                      <plugin>
                          <groupId>org.apache.maven.plugins</groupId>
-                         <artifactId>maven-jar-plugin</artifactId>
-                         <configuration>
-                             <archive>
-                                 <manifest>
-                                     <addClasspath>true</addClasspath>
-                                 </manifest>
-                             </archive>
-                         </configuration>
+                         <artifactId>maven-pmd-plugin</artifactId>
+                         <version>2.4</version>
                      </plugin>
                  </plugins>
              </build>
                     ]]>
    </source>
-
-
+                Maven плагины позволяют задать дополнительные действия которые будут выполнятся при сборке.
+                Например в приведённом примере добавлен плагин который делает проверку кода на наличие "плохого" кода и потенциальных ошибок.
+                См <a href="http://pmd.sourceforge.net/">ссылка</a>.
+               </p>
+               <p>
+                Более подробно о плагинах можно прочитать здесь $link
             </p>
         </section>
         </body>

@@ -21,7 +21,7 @@
                     <li>test</li>Тестирование с помощью JUnit тестов
                     <li>package</li>Создание .jar файла или war, ear  в зависимости от типа проекта
                     <li>integration-test</li>Запуск интеграционных тестов
-                    <li>install</li> Копирование .jar (war , ear) в локальный репозиторий $link$
+                    <li>install</li> Копирование .jar (war , ear) в локальный репозиторий $link
                     <li>deploy</li> публикация файла в удалённый репозиторий
                 </ol>
             </p>
