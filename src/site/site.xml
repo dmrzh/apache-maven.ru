@@ -13,7 +13,7 @@
     <skin>
         <groupId>ru.maven3</groupId>
         <artifactId>maven-ru-skin</artifactId>
-        <version>1.0</version>
+        <version>1.0-SNAPSHOT</version>
     </skin>
 
 
@@ -31,9 +31,9 @@
             <item name="Начало" href="quick_start.html"/>
             <item name="Файл проекта pom.xml" href="project-file.html"/>
 
-            <item name="Управление зависимостями" href="dependencyManagement.html"/>
+            <!--<item name="Управление зависимостями" href="dependencyManagement.html"/>-->
             <item name="жизненый цикл сборки: фазы сборки" href="lifecycle.html"/>
-            <item name="Дополнительные настройки" href="optionalSettings.html"/>
+            <!-- <item name="Дополнительные настройки" href="optionalSettings.html"/> -->
 
 
         </menu>
@@ -45,7 +45,7 @@
             <item name="maven-archetype-plugin"    href="http://maven.apache.org/archetype/maven-archetype-plugin/index.html"/>
             <item name="maven-site-plugin"    href="http://developers-blog.org/blog/default/2009/11/27/Maven-Site-Example"/>
             <item name="maven-source-plugin"    href="http://maven.apache.org/plugins/maven-source-plugin/index.html"/>
-            <item name="maven-javadoc-plugin"    href="http://maven.apache.org/plugins/maven-javadoc-plugin/l"/>
+            <item name="maven-javadoc-plugin"    href="http://maven.apache.org/plugins/maven-javadoc-plugin/"/>
 
         </menu>
     </body>
