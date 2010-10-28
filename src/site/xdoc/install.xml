@@ -16,9 +16,9 @@
                     Распакуйте архив   в инсталляционную директорию. Например в C:\Program Files\maven\ в Windows или /usr/share/maven в Linux
                 </li>
                 <li>
-                    Установите переменную окружения M2_HOME:
-                    В Windows зайдите "Мой компьютер"-->Управление -->Дополнительно --> Переменные окружения    и там добавьте   "M2_HOME" и   " C:\Program Files\maven\"  .
-                    В Linux можно добавить строку "export M2_HOME=/usr/share/maven"в файл /etc/profile .
+                    Установите переменную окружения M2_HOME:  <br/>                    
+                    В Windows зайдите "мой комьютер" ->свойства->дополнитльные параметры->переменные среды->системные переменные    и там добавьте   "M2_HOME" и   " C:\Program Files\maven\"  . <br/>
+                    В Linux можно добавить строку "export M2_HOME=/usr/share/maven"в файл /etc/profile . <br/>
                 </li>
                 <li>
                     Установите переменную окружения PATH

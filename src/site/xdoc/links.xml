@@ -24,7 +24,8 @@
                 <br/>
                 <a href="http://www.ibm.com/developerworks/java/library/j-5things13/index.html">5 things you didn't know
                     about ... Apache Maven
-                </a>
+                </a><br/>
+                <a href="http://mojo.codehaus.org/javascript-maven-tools/">Maven for javascript</a>
                 <br/>
             </p>
         </section>
