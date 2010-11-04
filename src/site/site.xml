@@ -36,9 +36,9 @@
             <!-- <item name="Дополнительные настройки" href="optionalSettings.html"/> -->
             <item name="Сравнение maven и ant" href="maven_vs_ant.html"/>
             <item name="FAQ" href="faq.html"/>
-
-
-
+        </menu>
+        <menu name="дополнительно">
+            <item name="Форумы" href="http://forum.java7.ru/"/>
         </menu>
         <menu name="Maven 3">
             <item name="Что нового в Maven 3" href="newFeatures.html"/>
