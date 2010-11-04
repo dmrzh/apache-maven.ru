@@ -2,7 +2,7 @@
 <project>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>ru.maven3</groupId>
+    <groupId>ru.apache-maven</groupId>
     <artifactId>site</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -38,7 +38,7 @@
     <distributionManagement>
         <site>
             <id>1gb</id>
-            <url>scp://root@1gb.rzhevskiy.info:10539/var/lib/tomcat-6/webapps-maven3/ROOT/</url>
+            <url>scp://root@1gb.rzhevskiy.info:10539/var/lib/tomcat-6/webapps-maven/ROOT/</url>
         </site>
     </distributionManagement>
 

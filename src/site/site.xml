@@ -2,16 +2,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
     <bannerLeft>
-        <name>maven3</name>
+        <name>apache-maven</name>
         <src>images/apache-maven-project-2.png</src>
-        <href>http://www.maven3.ru/</href>
+        <href>http://www.apache-maven.ru/</href>
     </bannerLeft>
     <bannerRight>
         <src>images/maven-logo-2.gif</src>
     </bannerRight>
 
     <skin>
-        <groupId>ru.maven3</groupId>
+        <groupId>ru.apache-maven</groupId>
         <artifactId>maven-ru-skin</artifactId>
         <version>1.0-SNAPSHOT</version>
     </skin>

@@ -3,13 +3,13 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
     <properties>
-        <title>Что такое Maven</title>
+        <title>Maven. Часто задаваемые вопросы</title>
         <author>Ржевский Дмитрий</author>
     </properties>
 
     <head>
         <meta name="keyword" content="java, maven, ant, faq, ява, мавен, ьфмут, часто задаваемые вопросы, чаво"/>
-        <title>Что такое Maven3</title>
+        <title>Maven. Часто задаваемые вопросы</title>
     </head>
 
 
@@ -18,9 +18,13 @@
             <p>
                 <b>При сборке проекта Maven постоянно  проверяет наличие обновлений в интернет. Могу ли я собирать проект без интернета?</b>
                 Да, можно но если в вашем локальном репозитории есть все необходимые для сборки артифакты.
-                Для этого нужно воспользваться опцией -o, например
+                Для этого нужно воспользваться опцией -o, например:
                 <source>
                     mvn -o package
+                </source>
+              Для того чтобы загрузить из интернета все нужные артифакты в локальный репозиторий выполните
+                <source>
+                dependency:go-offline
                 </source>
             </p>
         </section>

@@ -33,7 +33,7 @@
             <p>
                   <a href="http://mavenrepository.com/"> http://mavenrepository.com/</a> - позволяет по названию библиотеки найти groupId и artifactId.<br/>
                     <a href="http://findjar.com/">http://findjar.com/ </a> по полному имени находит jar файл где есть такой класс.
-
+                    <a href="http://habrahabr.ru/blogs/java/105046/"> Покрытие кода для Maven проектов (code coverage)</a>
                 </p>
         </section>
 
