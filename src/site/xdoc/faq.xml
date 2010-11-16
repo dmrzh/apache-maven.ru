@@ -27,6 +27,24 @@
                 dependency:go-offline
                 </source>
             </p>
+            <p>
+                <b>
+                    При сбоке проекта в тестах произошла ошибка.
+                    Как мне собрать проект без запуска тестов?
+                </b>
+                Для запуска сборки без выполнения тестов добавьте -Dmaven.test.skip=true
+                к коммандной строке запуска maven:
+                <source>mvn install -Dmaven.test.skip=true </source>
+            </p>
+
+             <p>
+                <b>
+                 Как запустить только один тест?
+                </b>
+                Для запуска только одного теста добавьте -Dtest=[Имя класса]
+                к коммандной строке запуска maven. Например
+                <source>mvn install -Dtest=ru.apache-maven.utils.ConverterTest</source>
+            </p>
         </section>
     </body>
 </document>
