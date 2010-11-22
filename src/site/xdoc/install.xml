@@ -33,11 +33,11 @@
 
                     <source>
                         dima@myhost ~ $ mvn -version
-                        Apache Maven 2.2.1 (r801777; 2009-08-06 23:16:01+0400)
-                        Java version: 1.6.0_18
-                        Java home: /opt/icedtea6-bin-1.8.1/jre
-                        Default locale: en_US, platform encoding: ANSI_X3.4-1968
-                        OS name: "linux" version: "2.6.34-gentoo-r6" arch: "amd64" Family: "unix
+                        Apache Maven 3.0 (r1004208; 2010-10-04 15:50:56+0400)
+                        Java version: 1.6.0_22
+                        Java home: /opt/sun-jdk-1.6.0.22/jre
+                        Default locale: ru_RU, platform encoding: UTF-8
+                        OS name: "linux" version: "2.6.34-gentoo-r12" arch: "amd64" Family: "unix"
                     </source>                    
                     то поздравляю, вы успешно установили Maven.
                 </li>
