@@ -35,6 +35,7 @@
             <item name="Репозиторий" href="repository.html"/>
             <item name="жизненый цикл сборки: фазы сборки" href="lifecycle.html"/>
             <!-- <item name="Дополнительные настройки" href="optionalSettings.html"/> -->
+            <item name="Профили" href="profiles.html"/>
             <item name="Сравнение maven и ant" href="maven_vs_ant.html"/>
             <item name="FAQ" href="faq.html"/>
         </menu>

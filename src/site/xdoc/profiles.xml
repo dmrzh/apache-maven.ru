@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>прифили Maven</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="java, maven, ant, зкщашдуы, profiles, профили, ява, мавен, ьфмут"/>
+        <title>прифили Maven</title>
+    </head>
+
+
+    <body>
+        <section name="Основные сведения">
+            <p>
+                Мавен изначально создавался принимая во внимание портируемость в разных окружениях
+                Но часто приложение приходится cобирать и запускать в разном окружении:
+                например для разработки используется одна база данных, в рабочем сервере используется другая.
+                при этом может понадобиться разные настройки, разные зависимости и плагины.
+                Для этих целей в maven используются профайлы.
+            </p>
+            <p>
+                Давайте определим два профайла: один для разработки, другой для производственного сервера.
+                Для разработки вполне подойдёт база hsqldb которая хранит все данные в пямяти.
+                На производственном сервере же используется база данных postgres которая которая сохраняет все данные на диск.
+                В профайлах для каждй конфигурации определены свои проперти database.url и зависимости для разных jdbc драйверов.
+            </p>
+            <p>
+               Ниже приведён пример объявления таких профайлов.
+               <source>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <profiles>
+(1)     <profile>
+            <id>development</id>
+            <properties>
+                <database.url>jdbc:hsqldb:mem:testdb</database.url>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.hsqldb</groupId>
+                    <artifactId>hsqldb</artifactId>
+                    <version>2.0.0</version>
+                </dependency>
+            </dependencies>
+        </profile>
+(2)     <profile>
+            <id>productionServer</id>
+            <properties>
+                <database.url>jdbc:postgresql://databseserver/database</database.url>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>9.0-801.jdbc4</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+    .....
+</project>]]>
+               </source>
+                
+            </p>
+            <p>
+                цифрами 1 и 2 обозначены  начала объявления профайлов. каждый профайл имеет идентификатор в данном случае development и productionServer.</p>
+            <p>
+                Внутри тэга &lt;profile> содержатся все те же объявления что и внутри &lt;project>: properties, dependencies, и др.
+                Вот полный список тегов которые могут содержаться внутри профайлов:
+
+<source><![CDATA[ * <repositories>
+ * <pluginRepositories>
+ * <dependencies>
+ * <plugins>
+ * <properties>
+ * <modules>
+ * <reporting>
+ * <dependencyManagement>
+ * <distributionManagement>
+ *  <build> тэг, который может содержать
+         o <defaultGoal>
+         o <resources>
+         o <testResources>
+         o <finalName>
+ ]]></source>
+
+               </p>
+            </section>
+            <section name="Активация профайла">
+            <p>
+
+                Чтобы содержимое тэга профайла "работало" нужно профайл активировать.
+                Когда профайл активирован его содержимое объединяется с основной частью pom.xml
+                Нужно заметить что активных профилей одновременно может быть несколько.
+                <br/>
+                Активировать профайл можно несколькими способами:<br/>
+
+                во первых это можно задать вручную в командной строке запуска maven, например: mvn package -P production  <br/>
+
+                Во вторые при объявлении самого профайла можно задать тэг &lt;activation>, который определяет профайл будет активирован: в нашеим примере профайл development активный по умолчанию:
+                <![CDATA[<activation><activeByDefault>true</activeByDefault></activation>.]]> Кроме активации по умолчанию можно задать активацию на основе операционной системы, установленных переменных окружения, версии JDK.
+            </p>
+            <p>
+                В коммандной строке можно задать какие профили будут деактивированы: mvn goal -P !profile-1,!profile-2 //приоритет командной строки выше
+            </p>
+            <p>
+
+                Активные профайлы можно также задать в ~/.m2/settings.xml
+                 <source>
+<![CDATA[
+                <settings>
+                  ...
+                  <profiles>
+                    <profile>
+                      <id>appserverConfig</id>
+                      <properties>
+                        <appserver.home>/path/to/appserver</appserver.home>
+                      </properties>
+                    </profile>
+                  </profiles>
+
+                  <activeProfiles>
+                    <activeProfile>appserverConfig</activeProfile>
+                  </activeProfiles>
+                  ...
+                </settings>]]></source>
+                
+            </p>
+        </section>
+        <section name="Отладка">
+            <p>
+
+                Чтобы проверить работу и возможно найти ошибки полезны слежующие плагины:
+
+                <ul>
+                <li>
+                для того чтобы показать какие профайлы сейчас активны можно набрать:
+                <source>mvn help:active-profiles</source>
+                причём опции командной строки принимаются во внимание. комманда
+                <source>mvn help:active-profiles -P productionServer,development</source>
+                выведет как и положено
+                <source>The following profiles are active:
+                 - development (source: pom)
+                 - productionServer (source: pom)</source>
+                 </li>
+                 <li>
+                Также можно помотреть pom полученный после объеденения основной части и активных профайлов:
+                 <source>mvn help:effective-pom -P productionServer</source>
+                 </li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</document>
