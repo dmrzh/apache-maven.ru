@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>Плагины: компилятор</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="java, maven, ant, compiler, maven-compiler-plugin, компилятор, ява, мавен, ьфмут"/>
+        <title>Что такое Maven</title>
+    </head>
+
+
+    <body>
+        <section name="Компилятор">
+            <p>Компилятор - основной плагин который используется практически во всех проектах.
+            Он доступен по умолчанию, но практически в каждом проекте его приходится
+                переобъявлять т.к.  настройки по умолчанию не очень подходящие. <br/>
+            Пример использования:
+            <source><![CDATA[
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-compiler-plugin</artifactId>
+                            <version>2.0.2</version>
+                            <configuration>
+                                <source>1.6</source>
+                                <target>1.6</target>
+                                <encoding>UTF-8</encoding>
+                            </configuration>
+                        </plugin>]]></source>
+            В этом примере в кофигурации используется версия java 1.6 (source - версия языка на котором написана программа; target - версия java машины которая будет этот код запускать)
+                и указано что кодировка исходного кода программы UTF-8.
+            По умолчанию версии java - 1.3 а кодировка - та которая у операционной системы по умолчанию.
+           </p>
+            <p>
+            Вообще у плагина есть две цели
+            compiler:compile и compiler:testCompile
+
+            <ul>
+                <li>compiler:compile - компилирует основную ветку исходников и по умолчанию связана с фазой comile</li>
+                <li>compiler:testCompile - компилирует тесты и по умолчанию связана с фазой test-compile.</li>
+            </ul>
+
+            Кроме приведёных настроек для компилятора можно задать следующие параметры:
+            <ul>
+                    <li>verbose</li> true или false
+                    <li>fork</li> запусть компиляцию в отдельной jvm
+                    <li>executable</li> путь к javac
+                    <li>compilerVersion</li>
+                    <li>meminitial</li>
+                    <li>maxmem</li>
+                    <li>debug</li>
+                    <li>compilerArgument</li>-verbose -bootclasspath ${java.home}\lib\rt.jar
+                    <li>compilerArguments</li>  verbose,  <bootclasspath>${java.home}\lib\rt.jar</bootclasspath>
+                    <li>compilerId</li> позволяет задать язык программирования исходного кода,  например csharp
+
+            </ul>
+            </p>
+        </section>
+    </body>
+</document>
+
+
