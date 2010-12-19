@@ -3,13 +3,13 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
     <properties>
-        <title>Плагины: компилятор</title>
+        <title>Плагины: компилятор maven-compiler-plugin</title>
         <author>Ржевский Дмитрий</author>
     </properties>
 
     <head>
         <meta name="keyword" content="java, maven, ant, compiler, maven-compiler-plugin, компилятор, ява, мавен, ьфмут"/>
-        <title>Плагины: компилятор</title>
+        <title>Плагины: компилятор maven-compiler-plugin</title>
     </head>
 
 
