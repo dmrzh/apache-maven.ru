@@ -3,16 +3,41 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
     <properties>
-        <title>Что такое Maven</title>
+        <title>Плагины Maven</title>
         <author>Ржевский Дмитрий</author>
     </properties>
 
     <head>
-        <meta name="keyword" content="java, maven, ant, about, ява, мавен, ьфмут"/>
-        <title>Что такое Maven</title>
+        <meta name="keyword" content="java, maven, здгпштб plugin, плагин, ява, мавен, плагины, ьфмут"/>
+        <title>Плагины Maven</title>
     </head>
 
 
     <body>
-        <section name=""></section>
-        </body></document>
+        <section name="">
+            <p>Требования к сборки сильно зависят от проекта. Плагины - это способ расширить функциональнасть maven в больших диапазонах.</p>
+        </section>
+        <section name="Объявление плагина">
+         <p>Объявление плагина похоже на объявление зависимости. Также как и зависимости плагины идентифицируется
+            с помошью GAV. Например:<br/>
+<source><![CDATA[<plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-checkstyle-plugin</artifactId>
+           <version>2.6</version>
+         </plugin>]]></source>
+             
+
+         </p>
+        </section>
+        <!--todo-->
+
+        <!--<section name="Привязка к фазам"></section>-->
+
+        <!--<section name="Настройки"></section>-->
+
+        <!--<section name="Репортинг"></section>-->
+
+        <!--<section name="Написание своего плагина"></section>-->
+    </body>
+        
+</document>

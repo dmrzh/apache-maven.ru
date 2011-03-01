@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>maven-archetype-plugin</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="шаблон проекта,фксруензу, maven-archetype-plugin, archetype, java, maven, здгпштб plugin, плагин, ява, мавен, плагины, ьфмут"/>
+        <title> maven-archetype-plugin</title>
+    </head>
+
+
+    <body>
+        <section name="Общие сведения">
+            <p>maven-archetype-plugin предназначен для того чтобы по существующему шаблону создавать новые проекты.</p>
+            <p>Создать проект спомошью maven-archetype-plugin очень просто - достаточно набрать:
+                <source>mvn archetype:generate</source>
+                Выбрать проект из списка, ответить на дополнительные вопросы - и плагин сгенерирует в текущей проект.
+                Я не буду подробно описывать как это работает - проще попробовать самому.
+                Хочу заметить можно задать
+                <a href="http://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html#Optional_Parameters">
+                    параметры
+                </a>
+                Напрямую в коммандной строке. а также выбрать репозиторий ахетипов.
+
+            </p>
+        </section>
+        <!--todo-->
+        <!--<section name="Создание своего архетипа">-->
+         <!--<p></p>-->
+        <!--</section>-->
+    </body>
+        
+</document>
