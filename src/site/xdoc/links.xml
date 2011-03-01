@@ -30,9 +30,13 @@
                 <a href="http://tedwise.com/2010/01/27/maven-micro-tip-get-sources-and-javadocs/">Maven Micro-Tip: Get sources and Javadocs</a>
                 <br/>
 
-                <a href="http://mike.vanvendeloo.net/2010/05/12/maven-3-are-you-ready-to-migrate">Maven 3: are you ready to migrate?</a>                
+                <a href="http://blog.springsource.com/2009/12/02/obtaining-spring-3-artifacts-with-maven/">Подключение Spring 3</a>
                 <br/>
 
+
+                <a href="http://mike.vanvendeloo.net/2010/05/12/maven-3-are-you-ready-to-migrate">Maven 3: are you ready to migrate?</a>
+                <br/>
+                
             </p>
         </section>
          <section name="Полезные инструменты">

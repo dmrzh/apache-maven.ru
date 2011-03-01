@@ -41,14 +41,15 @@
         </menu>
         <menu name="дополнительно">
             <item name="Форумы" href="http://forum.java7.ru/"/>
+            <item name="Ссылки" href="links.html"/>
         </menu>
         <menu name="Maven 3">
             <item name="Что нового в Maven 3" href="newFeatures.html"/>
-            <item name="Ссылки" href="links.html"/>
+
         </menu>
         <menu name="Плагины">
             <item name="maven-compiler-plugin"    href="plugins/maven-compiler-plugin.html"/>            
-            <item name="maven-archetype-plugin"    href="http://maven.apache.org/archetype/maven-archetype-plugin/index.html"/>
+            <item name="maven-archetype-plugin"    href="plugins/maven-archetype-plugin.html"/>
             <item name="maven-site-plugin"    href="http://developers-blog.org/blog/default/2009/11/27/Maven-Site-Example"/>
             <item name="maven-source-plugin"    href="http://maven.apache.org/plugins/maven-source-plugin/index.html"/>
             <item name="maven-javadoc-plugin"    href="http://maven.apache.org/plugins/maven-javadoc-plugin/"/>
