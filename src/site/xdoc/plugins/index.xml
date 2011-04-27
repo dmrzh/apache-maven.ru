@@ -19,19 +19,39 @@
         </section>
         <section name="Объявление плагина">
          <p>Объявление плагина похоже на объявление зависимости. Также как и зависимости плагины идентифицируется
-            с помошью GAV. Например:<br/>
-<source><![CDATA[<plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-checkstyle-plugin</artifactId>
-           <version>2.6</version>
-         </plugin>]]></source>
-             
+            с помошью GAV(groupId,artifactId,version). Например:<br/>
+        <source><![CDATA[<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-checkstyle-plugin</artifactId>
+    <version>2.6</version>
+</plugin>]]></source>
+             У каждого плагина есть цели (goals) - действия которые он может выполнять
+             Теперь чтобы вручную вызвать плагин достаточно набрать:
+             <source>mvn org.apache.maven.plugins:maven-checkstyle-plugin:check</source>
+             или в более краткой форме: <source>mvn checkstyle:check</source>
 
          </p>
         </section>
         <!--todo-->
 
-        <!--<section name="Привязка к фазам"></section>-->
+        <section name="Привязка к фазам"></section>
+        <p>
+            После того как плагин объявлен его можно настроить чтобы он автоматически запускаться в нужный момент.
+            Это делается с помощью привязки плагина к фазе сборки проекта:
+            <source><![CDATA[<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-checkstyle-plugin</artifactId>
+    <version>2.6</version>
+    <executions>
+        <execution>
+            <phase>install</phase>
+            <goals>
+                <goal>check</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>]]></source>
+        </p>
 
         <!--<section name="Настройки"></section>-->
 

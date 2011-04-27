@@ -14,7 +14,7 @@
 
 
     <body>
-        <section name="">
+        <section name="maven-surefire-plugin - плагин для запуска тестов">
             <p>
             maven-surefire-plugin - плагин который запускает тесты и генерирует отчёты по результатам их выполнения.
 
@@ -22,7 +22,7 @@
 
             maven-surefire-plugin содердит единственную цель surefire:test
 
-            тесты можно писать используя как JUnit так и TestNG links.
+            тесты можно писать используя как <a href="http://www.junit.org/">JUnit</a> так и <a href="http://testng.org">TestNG</a>.
 
 
 
@@ -45,7 +45,12 @@
                 * "**/Test*.java" - includes all of its subdirectories and all java filenames that start with "Test".
                 * "**/*Test.java" - includes all of its subdirectories and all java filenames that end with "Test".
                 * "**/*TestCase.java" - includes all of its subdirectories and all java filenames that end with "TestCase".
-            Чтобы вручную добавлять или удалять классы тестов  можно посмотреть здесь http://maven.apache.org/plugins/maven-surefire-plugin/examples/inclusion-exclusion.html
+            </p>
+            <p>
+             Чтобы вручную добавлять или удалять классы тестов  можно посмотреть здесь
+             <a href="http://maven.apache.org/plugins/maven-surefire-plugin/examples/inclusion-exclusion.html">http://maven.apache.org/plugins/maven-surefire-plugin/examples/inclusion-exclusion.html</a>.
+            </p>
+            <p>
             Запустить отдельный тест можно так:
             mvn -Dtest=TestCircle test
             имейте в виду что если вы хотите отладить тест в среде разработки то в конфигурации планина нужно выставить
