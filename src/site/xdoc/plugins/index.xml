@@ -15,9 +15,28 @@
 
     <body>
         <section name="">
-            <p>Требования к сборки сильно зависят от проекта. Плагины - это способ расширить функциональнасть maven в больших диапазонах.</p>
+            <p>Требования к сборке сильно зависят от проекта. Плагины - это способ расширить функциональнасть maven в больших диапазонах.</p>
         </section>
-        <section name="Объявление плагина">
+        <section name="Использование плагина">
+            <p>
+                В простейшем случае запустить плагин просто, например:
+                <source>mvn org.apache.maven.plugins:maven-checkstyle-plugin:check</source>
+                В данном примере вызывается плагин с
+                <ul>
+                    <li>groupId "org.apache.maven.plugins"</li>
+                    <li>artifactId "maven-checkstyle-plugin"</li>
+                    <li>последней версией</li>
+                    <li>и целью (goal) "check"</li>
+                </ul>
+                Цель - это действие, которые плагин может выполнять. Целей может быть много.
+            </p>
+            <p>плагины с groupId "org.apache.maven.plugins" можно запустить в более краткой форме:
+                <source>mvn maven-checkstyle-plugin:check</source>
+                или даже так:
+                <source>mvn checkstyle:check</source>
+            </p>
+        </section>
+        <section name="Объявление плагина в pom.xml">
          <p>Объявление плагина похоже на объявление зависимости. Также как и зависимости плагины идентифицируется
             с помошью GAV(groupId,artifactId,version). Например:<br/>
         <source><![CDATA[<plugin>
@@ -25,35 +44,45 @@
     <artifactId>maven-checkstyle-plugin</artifactId>
     <version>2.6</version>
 </plugin>]]></source>
-             У каждого плагина есть цели (goals) - действия которые он может выполнять
-             Теперь чтобы вручную вызвать плагин достаточно набрать:
-             <source>mvn org.apache.maven.plugins:maven-checkstyle-plugin:check</source>
-             или в более краткой форме: <source>mvn checkstyle:check</source>
-
+         Объявление плагина в pom.xml позволяет зафиксировать версию плагина, задать ему неоходимые параметры, привзать к фазам.
          </p>
         </section>
-        <!--todo-->
 
-        <section name="Привязка к фазам"></section>
+        <section name="Привязка к фазам сборки проекта">
         <p>
             После того как плагин объявлен его можно настроить чтобы он автоматически запускаться в нужный момент.
-            Это делается с помощью привязки плагина к фазе сборки проекта:
+            Это делается с помощью привязки плагина к <a href="../lifecycle.html">фазе</a> сборки проекта:
             <source><![CDATA[<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-checkstyle-plugin</artifactId>
     <version>2.6</version>
     <executions>
         <execution>
-            <phase>install</phase>
+            <phase>package</phase>
             <goals>
                 <goal>check</goal>
             </goals>
         </execution>
     </executions>
 </plugin>]]></source>
+           в данном примере плагин запустится в фазе проекта package
         </p>
-
-        <!--<section name="Настройки"></section>-->
+         </section>
+        <section name="Настройки">
+            Для работы большинства плагинов обычно требуются дополнительные настройки, которые специфичные для конкретного плагина.
+            Настройки задаются в в тэгах &lt;configuration>. Например так настраивается tomcat - плагин:
+            <source><![CDATA[<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>tomcat-maven-plugin</artifactId>
+    <version>1.1</version>
+    <configuration>
+        <fork>false</fork>
+        <server>test-server</server>
+        <url>http://test-server/manager</url>
+    </configuration>
+</plugin>]]></source>
+          Содержимое в тэгах зависит от конкретного плагина и описывается в документации по плагину.
+        </section>
 
         <!--<section name="Репортинг"></section>-->
 

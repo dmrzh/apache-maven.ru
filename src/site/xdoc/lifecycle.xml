@@ -39,7 +39,7 @@
                 <source>mvn clean package</source>
             </p>
             <p>
-                С поным списком фаз и их описанием (на английском языке) можно ознакомиться  здесь
+                С полным списком фаз и их описанием (на английском языке) можно ознакомиться  здесь
                 <a href="http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference">http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference</a>                
             </p>
           </section>

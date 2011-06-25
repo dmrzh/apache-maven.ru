@@ -16,7 +16,7 @@
     <body>
         <section name="maven-archetype-plugin">
             <p>Плагин maven-archetype-plugin предназначен для того чтобы по существующему шаблону создавать новые проекты.</p>
-            <p>Создать проект спомошью maven-archetype-plugin очень просто - достаточно набрать:
+            <p>Создать проект с помощью maven-archetype-plugin достаточно просто - достаточно набрать:
                 <source>mvn archetype:generate</source>
                 Выбрать шаблон из списка, ответить на дополнительные вопросы - и плагин сгенерирует в текущей проект.
                 Я не буду подробно описывать как это работает - проще попробовать самому.
@@ -24,7 +24,7 @@
                 <a href="http://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html#Optional_Parameters">
                     параметры
                 </a>
-                Напрямую в коммандной строке. а также выбрать репозиторий ахетипов.
+                <a href="../quick_start.html">напрямую</a> в коммандной строке. а также выбрать репозиторий ахетипов.
 
             </p>
         </section>
