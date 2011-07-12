@@ -23,10 +23,31 @@
             maven-surefire-plugin содердит единственную цель surefire:test
 
             тесты можно писать используя как <a href="http://www.junit.org/">JUnit</a> так и <a href="http://testng.org">TestNG</a>.
+            </p>
 
+            <p>
+            по умолчанию запускаются все тесты с такими именами
+                * "**/Test*.java" - включает все java файлы которые начинаются с "Test" и расположены в пооддиректориях.
+                * "**/*Test.java" - включает все java файлы которые заканчиваются на "Test" и расположены в пооддиректориях.
+                * "**/*TestCase.java" -  включает все java файлы которые заканчиваются на "TestCase" и расположены в пооддиректориях.
+            </p>
 
+            <p>
+             Чтобы вручную добавлять или удалять классы тестов  можно посмотреть здесь
+             <a href="http://maven.apache.org/plugins/maven-surefire-plugin/examples/inclusion-exclusion.html">http://maven.apache.org/plugins/maven-surefire-plugin/examples/inclusion-exclusion.html</a>.
+            </p>
 
-
+            <p>
+            Запустить отдельный тест можно так:
+            mvn -Dtest=TestCircle test
+            имейте в виду что если вы хотите отладить тест в среде разработки то в конфигурации планина нужно выставить
+             <source><![CDATA[<forkMode>never</forkMode>]]></source>
+            либо запускать тесты с remotedebug
+            <source>
+            mvn -Dmaven.surefire.debug test
+            </source>
+            </p>
+            <p>
             Пропустить выполнение тестов можно
              <source><![CDATA[
                     <configuration>
@@ -40,26 +61,8 @@
             <source>
             mvn install -Dmaven.test.skip=true
             </source>
+           </p>
 
-            по умолчанию запускаются все тесты с такими именами
-                * "**/Test*.java" - includes all of its subdirectories and all java filenames that start with "Test".
-                * "**/*Test.java" - includes all of its subdirectories and all java filenames that end with "Test".
-                * "**/*TestCase.java" - includes all of its subdirectories and all java filenames that end with "TestCase".
-            </p>
-            <p>
-             Чтобы вручную добавлять или удалять классы тестов  можно посмотреть здесь
-             <a href="http://maven.apache.org/plugins/maven-surefire-plugin/examples/inclusion-exclusion.html">http://maven.apache.org/plugins/maven-surefire-plugin/examples/inclusion-exclusion.html</a>.
-            </p>
-            <p>
-            Запустить отдельный тест можно так:
-            mvn -Dtest=TestCircle test
-            имейте в виду что если вы хотите отладить тест в среде разработки то в конфигурации планина нужно выставить
-             <source><![CDATA[<forkMode>never</forkMode>]]></source>
-            либо запускать тесты с remotedebug
-            <source>
-            mvn -Dmaven.surefire.debug test
-            </source>
-               </p>
 
         </section>
         </body></document>
