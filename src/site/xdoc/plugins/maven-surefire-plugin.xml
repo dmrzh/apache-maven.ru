@@ -63,6 +63,12 @@
             </source>
            </p>
 
-
+             <p>
+                 Ссылки:
+                 <ul>
+                     <li><a href="http://mojo.codehaus.org/cobertura-maven-plugin/">cobertura-maven-plugin</a>Измерение степени покрытия кода тестами.</li>
+                     <li><a href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a>мнтеграционное тестирование</li>
+                 </ul>
+             </p>
         </section>
         </body></document>
