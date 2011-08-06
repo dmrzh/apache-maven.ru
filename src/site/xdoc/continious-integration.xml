@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>Непрерывная интеграция</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="Continious Integration, автоматическая сборка, тесты, тестирование, junit"/>
+        <title>Непрерывная интеграция</title>
+    </head>
+
+
+    <body>
+        <section name="Что такое Continious Integration">
+            <p>
+                Непрерывная интеграция ( Continious Integration, CI)- это автоматическая сборка проекта из исходного кода, при этом дополнительно возможен запуск
+                автоматических тестов (см.
+                <a href="http://maven.apache.org/plugins/maven-surefire-plugin/">maven-surefire-plugin</a>,
+                <a href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a>
+                )
+                проверка качесва кода (см.
+                <a href="http://maven.apache.org/plugins/maven-pmd-plugin/">maven-pmd-plugin</a>,
+                <a href="http://maven.apache.org/plugins/maven-checkstyle-plugin/">maven-checkstyle-plugin</a>
+                <a href="http://mojo.codehaus.org/findbugs-maven-plugin/">findbugs-maven-plugin</a> ), развёртывание приложения на тестовом сервере (для серверных приложений). <br/>
+                Сборка сборка проекта происходиит при изменени исходного кода проекта или/и по расписанию.<br/>
+                В результате достигается:
+                <ul>
+                    <li>
+                       более ранее обнаружение ошибок
+                    </li>
+                    <li>
+                       автоматизация рутинных операций
+                    </li>
+                </ul>
+                Особенно актуально использование непрерывной интеграции если над проектом работает несколько человек.
+            </p>
+            <!--<img src="images/ci-server.gif" height="800px"/>-->
+            <p>
+
+                Организовать процесс автоматической сборки приложения не так уж сложно - для этого существует множество готовых продуктов:
+                <ul>
+                    <li><a href="http://jenkins-ci.org/">Jenkins</a>/Hadson</li>
+                    <li><a href="http://continuum.apache.org/">Continuum</a></li>
+                    <li><a href="http://cruisecontrol.sourceforge.net/">CruiseControl</a></li>
+                    <li><a href="http://www.jetbrains.com/teamcity/">Teamcity</a></li>
+                </ul>
+                Существуют ещё продукты, которые менее распространены.
+            </p>
+        </section>
+        <!--<section name="Минимальная конфигурация">-->
+            <!--<p>-->
+               <!--Чтобы настроить ci в самом простейшем виде нужно установить один из приведённых выше инструментов, добавить новый проект указав систему контроля версий,-->
+                <!--и настроить как вас должен уведомлять ci-сервер. Своевременное уведомление очен важно.-->
+
+            <!--</p>-->
+        <!--</section>-->
+
+        </body>
+    </document>
