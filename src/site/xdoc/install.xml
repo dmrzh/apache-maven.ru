@@ -13,12 +13,13 @@
                 в раздел <a href="http://maven.apache.org/download.html">загрузка</a> и скачайте последнюю стабильную версию.
                 </li>
                 <li>
-                    Распакуйте архив   в инсталляционную директорию. Например в C:\Program Files\maven\ в Windows или /usr/share/maven в Linux
+                    Распакуйте архив   в инсталляционную директорию. Например в C:\Program Files\maven\ в Windows или /opt/maven в Linux
                 </li>
                 <li>
                     Установите переменную окружения M2_HOME:  <br/>                    
-                    В Windows зайдите "мой комьютер" ->свойства->дополнитльные параметры->переменные среды->системные переменные    и там добавьте   "M2_HOME" и   " C:\Program Files\maven\"  . <br/>
-                    В Linux можно добавить строку "export M2_HOME=/usr/share/maven"в файл /etc/profile . <br/>
+                    В Windows кликните правой копкой мыши на "мой комьютер" ->свойства->дополнитльные параметры->переменные среды->системные переменные
+                    и там добавьте   "M2_HOME" и   " C:\Program Files\maven\"  . <br/>
+                    В Linux можно добавить строку "export M2_HOME=/opt/maven"в файл /etc/profile . <br/>
                 </li>
                 <li>
                     Установите переменную окружения PATH
