@@ -25,7 +25,7 @@
                 <a href="http://maven.apache.org/plugins/maven-pmd-plugin/">maven-pmd-plugin</a>,
                 <a href="http://maven.apache.org/plugins/maven-checkstyle-plugin/">maven-checkstyle-plugin</a>
                 <a href="http://mojo.codehaus.org/findbugs-maven-plugin/">findbugs-maven-plugin</a> ), развёртывание приложения на тестовом сервере (для серверных приложений). <br/>
-                Сборка сборка проекта происходиит при изменени исходного кода проекта или/и по расписанию.<br/>
+                Сборка проекта происходиит при изменени исходного кода проекта или/и по расписанию.<br/>
                 В результате достигается:
                 <ul>
                     <li>
