@@ -21,7 +21,7 @@
                 <a href="http://maven.apache.org/plugins/maven-surefire-plugin/">maven-surefire-plugin</a>,
                 <a href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a>
                 )
-                проверка качесва кода (см.
+                проверка качества кода (см.
                 <a href="http://maven.apache.org/plugins/maven-pmd-plugin/">maven-pmd-plugin</a>,
                 <a href="http://maven.apache.org/plugins/maven-checkstyle-plugin/">maven-checkstyle-plugin</a>
                 <a href="http://mojo.codehaus.org/findbugs-maven-plugin/">findbugs-maven-plugin</a> ), развёртывание приложения на тестовом сервере (для серверных приложений). <br/>
