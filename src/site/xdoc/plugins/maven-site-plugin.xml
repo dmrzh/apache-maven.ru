@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>maven-site-plugin</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="сайт проекта, site plugin, java, maven, здгпшт, plugin, плагин, ява, мавен, плагины, ьфмут"/>
+        <title> maven-site-plugin</title>
+    </head>
+
+
+    <body>
+        <section name="maven-archetype-plugin">
+            <p>
+                Плагин maven-site-plugin предназначен для того чтобы легко создавать сайт проекта.
+                В директории Вашего проекта наберите
+                <source>mvn site</source>
+                И мавен автоматически сгенерирует сайт по нему. Сгенерированные файлы будут лежать в директории
+                target/site.
+
+            </p>
+            <p>
+                Этот плагин можно довольно гибко настраивать, добавлять доплнитьные страницы, пункты меню и т.д.
+                К примеру этот сайт создан с помощью этого плагина.
+            </p>
+            <p>
+               Ссылки:
+                <ul>
+                    <li>
+                        <a href="http://maven.apache.org/plugins/maven-site-plugin/">
+                            http://maven.apache.org/plugins/maven-site-plugin/
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://developers-blog.org/blog/default/2009/11/27/Maven-Site-Example">
+                        http://developers-blog.org/blog/default/2009/11/27/Maven-Site-Example
+                        </a>
+                    </li>
+                </ul>
+            </p>
+        </section>
+    </body>
+
+</document>
+

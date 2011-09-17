@@ -43,9 +43,7 @@
             имейте в виду что если вы хотите отладить тест в среде разработки то в конфигурации планина нужно выставить
              <source><![CDATA[<forkMode>never</forkMode>]]></source>
             либо запускать тесты с remotedebug
-            <source>
-            mvn -Dmaven.surefire.debug test
-            </source>
+            <source>mvn -Dmaven.surefire.debug test</source>
             </p>
             <p>
             Пропустить выполнение тестов можно
@@ -53,21 +51,18 @@
                     <configuration>
                       <skipTests>true</skipTests>
                     </configuration>]]></source>
-             <source>
-            или mvn install -DskipTests
-            </source>
+                 или
+             <source>mvn install -DskipTests</source>
 
             чтобы пропустить ещё и компиляцию тестов вызовите maven так:
-            <source>
-            mvn install -Dmaven.test.skip=true
-            </source>
+            <source>mvn install -Dmaven.test.skip=true</source>
            </p>
 
              <p>
                  Ссылки:
                  <ul>
-                     <li><a href="http://mojo.codehaus.org/cobertura-maven-plugin/">cobertura-maven-plugin</a>Измерение степени покрытия кода тестами.</li>
-                     <li><a href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a>мнтеграционное тестирование</li>
+                     <li><a href="http://mojo.codehaus.org/cobertura-maven-plugin/">cobertura-maven-plugin</a> Измерение степени покрытия кода тестами.</li>
+                     <li><a href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a> нтеграционное тестирование</li>
                  </ul>
              </p>
         </section>

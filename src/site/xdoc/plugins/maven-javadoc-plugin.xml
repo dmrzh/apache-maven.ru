@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>maven-javadoc-plugin</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="документация, documentation,javadoc, джавадок, maven-javadoc-plugin, java, maven, здгпшт, plugin, плагин, ява, мавен, плагины, ьфмут"/>
+        <title> maven-archetype-plugin</title>
+    </head>
+
+
+    <body>
+        <section name="maven-javadoc-plugin">
+            <p>Плагин maven-javadoc-plugin предназначен для того чтобы генерировать докуметацию
+                по исходному коду проекта стандартной утилитой
+                <a href="http://download.oracle.com/javase/7/docs/technotes/guides/javadoc/index.html">javadoc</a>.
+                </p>
+               <p>
+                  Ссылка:<br/>
+                   <a href="http://maven.apache.org/plugins/maven-javadoc-plugin">
+                        http://maven.apache.org/plugins/maven-javadoc-plugin
+                   </a>
+               </p>
+        </section>
+    </body>
+
+</document>

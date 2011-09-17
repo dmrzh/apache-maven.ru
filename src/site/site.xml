@@ -56,8 +56,8 @@
 
 
             <item name="maven-source-plugin"    href="plugins/maven-source-plugin.html"/>
-            <item name="maven-javadoc-plugin"    href="http://maven.apache.org/plugins/maven-javadoc-plugin/"/>
-            <item name="maven-site-plugin"    href="http://developers-blog.org/blog/default/2009/11/27/Maven-Site-Example"/>
+            <item name="maven-javadoc-plugin"    href="plugins/maven-javadoc-plugin.html"/>
+            <item name="maven-site-plugin"    href="plugins/maven-site-plugin.html"/>
         </menu>
     </body>
 

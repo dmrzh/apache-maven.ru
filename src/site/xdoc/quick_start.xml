@@ -17,16 +17,17 @@
                 Давайте создадим новый проект. Для этого выполним команду:
             </p>
             <p>
-                <source> mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes  -DarchetypeArtifactId=maven-archetype-quickstart </source>
+                <source> mvn archetype:generate</source>
             </p>
             <p>
-                эта команда спросит, его
+                Выполнив эту команду maven пакажет список шаблонов(архитипов) для разных проектов.
+                Выберете проект и еговресию по умлчанию,  нажав Enter, Enter далее команда спросит,
                 <i>groupId</i>
                 и
                 <i>artifcactId</i>
                 введите данные:
                 <br/>
-                <i>ru.maven3</i>
+                <i>ru.apache_maven</i>
                 <br/>
                 <i>testproject1</i>
                 <br/>
@@ -43,12 +44,12 @@
                                 |-- main
                                 |   `-- java
                                 |       `--ru
-                                |           `-- apache-maven
+                                |           `-- ru.apache_maven
                                 |                   `-- App.java
                                 `-- test
                                     `-- java
                                         `-- ru
-                                            `-- apache-maven
+                                            `-- ru.apache_maven
                                                     `-- AppTest.java
         </pre>
             </p>
