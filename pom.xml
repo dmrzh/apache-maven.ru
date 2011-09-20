@@ -35,11 +35,6 @@
         </plugins>
     </build>
 
-    <distributionManagement>
-        <site>
-            <id>1gb</id>
-            <url>scp://root@1gb.rzhevskiy.info:10539/var/lib/tomcat-6/webapps-maven/ROOT/</url>
-        </site>
-    </distributionManagement>
+
 
 </project>
