@@ -17,13 +17,11 @@
         <section name="Создание архива и исходным кодом">
             Самый простой способ- создание архива - выполнить в коммандной строке :
             <p>
-             <source>
-               mvn source:jar
-             </source>
+             <source>mvn source:jar</source>
 
                Чтобы этот плагин автоматически запускался во время сборки плагина рекомендуется добавть его в pom.xml
                в раздел /project/build/plugins/
-
+                                                                                             http://open.bekk.no/keeping-your-maven-build-fast/
              <source> <![CDATA[<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-source-plugin</artifactId>
