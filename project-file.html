@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Руководство по Maven - 
+        Файл проекта pom.xml</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Ржевский Дмитрий" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href="http://www.apache-maven.ru/" id="bannerLeft">
+    
+                                            <img src="images/apache-maven-project-2.png" alt="" />
+    
+            </a>
+                          <span id="bannerRight">
+    
+                                            <img src="images/maven-logo-2.gif" alt="" />
+    
+            </span>
+            <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Last Published: 2011-09-21
+                      </div>
+            <div class="xright">            <a href="http://maven.apache.org/" class="externalLink">maven.apache.org</a>
+            |
+                <a href="http://www.log4j.ru/" class="externalLink">log4j.ru</a>
+            |
+                <a href="http://www.rzhevskiy.info/" class="externalLink">Ржевский Дмитрий</a>
+            
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+    
+                   <h5>О Maven</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Что такое Maven и для чего нужен</a>
+          </li>
+              
+    <li class="none">
+                    <a href="install.html">Установка</a>
+          </li>
+              
+    <li class="none">
+                    <a href="quick_start.html">Начало</a>
+          </li>
+              
+    <li class="none">
+              <strong>Файл проекта pom.xml</strong>
+        </li>
+              
+    <li class="none">
+                    <a href="repository.html">Репозиторий</a>
+          </li>
+              
+    <li class="none">
+                    <a href="lifecycle.html">жизненый цикл сборки: фазы сборки</a>
+          </li>
+              
+    <li class="none">
+                    <a href="profiles.html">Профили</a>
+          </li>
+              
+    <li class="none">
+                    <a href="maven_vs_ant.html">Сравнение maven и ant</a>
+          </li>
+              
+    <li class="none">
+                    <a href="continuous-integration.html">Непрерывная интеграция</a>
+          </li>
+              
+    <li class="none">
+                    <a href="faq.html">FAQ</a>
+          </li>
+          </ul>
+              <h5>дополнительно</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="http://forum.java7.ru/" class="externalLink">Форумы</a>
+          </li>
+              
+    <li class="none">
+                    <a href="links.html">Ссылки</a>
+          </li>
+          </ul>
+              <h5>Maven 3</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="newFeatures.html">Что нового в Maven 3</a>
+          </li>
+          </ul>
+              <h5>Плагины</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="plugins/index.html">Общая информация</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-archetype-plugin.html">maven-archetype-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-compiler-plugin.html">maven-compiler-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-surefire-plugin.html">maven-surefire-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-source-plugin.html">maven-source-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-javadoc-plugin.html">maven-javadoc-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-site-plugin.html">maven-site-plugin</a>
+          </li>
+          </ul>
+                                                 
+                        
+                        
+            <a href="http://maven.apache.org/" title="Maven" class="poweredBy">
+                            <img alt="Maven" src="http://maven.apache.org/images/logos/maven-feather.png" />
+            </a>
+                            <!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1931543" target="_top">'+
+'<img src="http://d9.c7.bd.a1.top.mail.ru/counter?id=1931543;t=131;js='+js+
+a+';rand='+Math.random()+'" alt="Ð ÐµÐ¹ÑÐ¸Ð½Ð³@Mail.ru" border="0" '+
+'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_top" href="http://top.mail.ru/jump?from=1931543">
+<img src="http://d9.c7.bd.a1.top.mail.ru/counter?js=na;id=1931543;t=131"
+height="40" width="88" border="0" alt="Ð ÐµÐ¹ÑÐ¸Ð½Ð³@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+        <!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter9257623 = new Ya.Metrika({id:9257623, enableAll: true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/9257623" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+        <!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6362918;
+var sc_invisible=1;
+var sc_security="2b6fa6ba";
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free_web_stats.html"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6362918/0/2b6fa6ba/1/"
+alt="free web stats" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+        <script type="text/javascript" src="/js/orphus.js"></script>
+<a href="http://orphus.ru" id="orphus" target="_blank">
+    <img alt="Orphus" src="/images/orphus.gif" border="0"  />
+</a>
+           
+  
+
+  
+    
+  
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+     <div style="float: right;">
+          <script type="text/javascript"><!--
+google_ad_client = "pub-1556989629349199";
+/* maven 120x600, ÑÐ¾Ð·Ð´Ð°Ð½Ð¾ 24.10.10 */
+google_ad_slot = "2290603997";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+          </div>
+
+      <div id="contentBox">
+        
+    
+        <div class="section"><h2>&#x427;&#x442;&#x43e; &#x442;&#x430;&#x43a;&#x43e;&#x435; pom.xml<a name="a__pom.xml"></a></h2>
+            <p>
+           pom.xml - &#x44d;&#x442;&#x43e; &#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x43d;&#x43e;&#x439; &#x444;&#x430;&#x439;&#x43b; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x44b;&#x439; &#x43e;&#x43f;&#x438;&#x441;&#x44b;&#x432;&#x430;&#x435;&#x442; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;.
+                &#x412;&#x43e;&#x43e;&#x431;&#x449;&#x435; &#x43c;&#x43e;&#x433;&#x443;&#x442; &#x431;&#x44b;&#x442;&#x44c; &#x434;&#x43e;&#x43f;&#x43e;&#x43b;&#x43d;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435; &#x444;&#x430;&#x439;&#x43b;&#x44b;, &#x43d;&#x43e; &#x43e;&#x43d;&#x438; &#x438;&#x433;&#x440;&#x430;&#x44e;&#x442; &#x432;&#x442;&#x43e;&#x440;&#x43e;&#x441;&#x442;&#x435;&#x43f;&#x435;&#x43d;&#x43d;&#x443;&#x44e; &#x440;&#x43e;&#x43b;&#x44c;.
+
+        </p>
+            <p>&#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x440;&#x435;&#x437;&#x431;&#x435;&#x440;&#x451;&#x43c; &#x438;&#x437; &#x447;&#x435;&#x433;&#x43e; &#x441;&#x43e;&#x441;&#x442;&#x43e;&#x438;&#x442; &#x444;&#x430;&#x439;&#x43b; pom.xml</p>
+         </div>
+        <div class="section"><h2>&#x41a;&#x43e;&#x440;&#x43d;&#x435;&#x432;&#x43e;&#x439; &#x44d;&#x43b;&#x435;&#x43c;&#x435;&#x43d;&#x442; &#x438; &#x437;&#x430;&#x433;&#x43e;&#x43b;&#x43e;&#x432;&#x43e;&#x43a;.<a name="a___."></a></h2>
+            <p>
+
+                </p><div class="source"><pre>
+            
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0
+                    http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  .............
+&lt;/project&gt;
+  
+                </pre></div>
+         &#x41a;&#x43e;&#x440;&#x43d;&#x435;&#x432;&#x43e;&#x439; &#x44d;&#x43b;&#x435;&#x43c;&#x435;&#x43d;&#x442;   &lt;project&gt;, &#x441;&#x445;&#x435;&#x43c;&#x430;,
+                &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x430;&#x44f; &#x43e;&#x431;&#x43b;&#x435;&#x433;&#x447;&#x430;&#x435;&#x442; &#x440;&#x435;&#x434;&#x430;&#x43a;&#x442;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x438; &#x43f;&#x440;&#x43e;&#x432;&#x435;&#x440;&#x43a;&#x443;, &#x438; &#x432;&#x435;&#x440;&#x441;&#x438;&#x44f; POM.
+
+            <p>
+            &#x412;&#x43d;&#x443;&#x442;&#x440;&#x438; &#x442;&#x44d;&#x433;&#x430; project &#x441;&#x43e;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442;&#x441;&#x44f; &#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x43d;&#x430;&#x44f; &#x438; &#x43e;&#x431;&#x44f;&#x437;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44f; &#x43e; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x435;:
+      </p><div class="source"><pre>
+
+  &lt;!-- The Basics --&gt;
+  &lt;groupId&gt;...&lt;/groupId&gt;
+  &lt;artifactId&gt;...&lt;/artifactId&gt;
+  &lt;version&gt;...&lt;/version&gt;
+
+   </pre></div>
+
+    &#x412; Maven &#x43a;&#x430;&#x436;&#x434;&#x44b;&#x439; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442; &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x446;&#x438;&#x440;&#x443;&#x435;&#x442;&#x441;&#x44f; &#x43f;&#x430;&#x440;&#x43e;&#x439; groupId    artifactId.
+                &#x412;&#x43e; &#x438;&#x437;&#x431;&#x435;&#x436;&#x430;&#x43d;&#x438;&#x435; &#x43a;&#x43e;&#x43d;&#x444;&#x43b;&#x438;&#x43a;&#x442;&#x430; &#x438;&#x43c;&#x451;&#x43d;,  groupId -
+    &#x43d;&#x430;&#x438;&#x43c;&#x435;&#x43d;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438; &#x438;&#x43b;&#x438; &#x43f;&#x43e;&#x434;&#x440;&#x430;&#x437;&#x434;&#x435;&#x43b;&#x435;&#x43d;&#x438;&#x44f; &#x438; &#x43e;&#x431;&#x44b;&#x447;&#x43d;&#x43e; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x443;&#x44e;&#x442; &#x442;&#x430;&#x43a;&#x438;&#x435; &#x436;&#x435; &#x43f;&#x440;&#x430;&#x432;&#x438;&#x43b;&#x430; &#x43a;&#x430;&#x43a; &#x438; &#x43f;&#x440;&#x438; &#x438;&#x43c;&#x435;&#x43d;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x438; &#x43f;&#x430;&#x43a;&#x435;&#x442;&#x43e;&#x432; &#x432; Java - &#x437;&#x430;&#x43f;&#x438;&#x441;&#x44b;&#x432;&#x430;&#x44e;&#x442; &#x434;&#x43e;&#x43c;&#x435;&#x43d;&#x43d;&#x43e;&#x435; &#x438;&#x43c;&#x44f; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438; &#x438;&#x43b;&#x438; &#x441;&#x430;&#x439;&#x442;&#x430; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430;.
+
+                 artifactId - &#x43d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430;.   &#x412;&#x43d;&#x443;&#x442;&#x440;&#x438; &#x442;&#x44d;&#x433;&#x430; version &#x43a;&#x430;&#x43a; &#x43c;&#x43e;&#x436;&#x43d;&#x43e; &#x434;&#x43e;&#x433;&#x430;&#x434;&#x430;&#x442;&#x44c;&#x441;&#x44f; &#x445;&#x440;&#x430;&#x43d;&#x438;&#x442;&#x441;&#x44f; &#x432;&#x435;&#x440;&#x441;&#x438;&#x44f; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430;.
+                &#x422;&#x440;&#x43e;&#x439;&#x43a;&#x43e;&#x439;  groupId, artifactId, version &#x43c;&#x43e;&#x436;&#x43d;&#x43e; &#x43e;&#x434;&#x43d;&#x43e;&#x437;&#x43d;&#x430;&#x447;&#x43d;&#x43e; &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x446;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; jar &#x444;&#x430;&#x439;&#x43b; &#x43f;&#x440;&#x438;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x44f; &#x438;&#x43b;&#x438; &#x431;&#x438;&#x431;&#x43b;&#x438;&#x43e;&#x442;&#x435;&#x43a;&#x438;.
+                &#x415;&#x441;&#x43b;&#x438; &#x441;&#x43e;&#x441;&#x442;&#x43e;&#x44f;&#x43d;&#x438;&#x435; &#x43a;&#x43e;&#x434;&#x430; &#x434;&#x43b;&#x44f; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; &#x43d;&#x435; &#x437;&#x430;&#x444;&#x438;&#x43a;&#x441;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x43d;&#x43e;, &#x442;&#x43e; &#x432; &#x43a;&#x43e;&#x43d;&#x446;&#x435; &#x43a; &#x438;&#x43c;&#x435;&#x43d;&#x438; &#x432;&#x435;&#x440;&#x441;&#x438;&#x438; &#x434;&#x43e;&#x431;&#x430;&#x432;&#x43b;&#x44f;&#x435;&#x442;&#x441;&#x44f; &quot;-SNAPSHOT&quot; &#x447;&#x442;&#x43e; &#x43e;&#x431;&#x43e;&#x437;&#x43d;&#x430;&#x447;&#x430;&#x435;&#x442; &#x447;&#x442;&#x43e; &#x432;&#x435;&#x440;&#x441;&#x438;&#x44f; &#x432; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43e;&#x442;&#x43a;&#x435; &#x438; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x438;&#x440;&#x443;&#x44e;&#x449;&#x438;&#x439; jar &#x444;&#x430;&#x439;&#x43b; &#x43c;&#x43e;&#x436;&#x435;&#x442; &#x43c;&#x435;&#x43d;&#x44f;&#x442;&#x44c;&#x441;&#x44f;.   
+
+                &lt;packaging&gt;...&lt;/packaging&gt;   &#x43e;&#x43f;&#x440;&#x435;&#x434;&#x435;&#x43b;&#x44f;&#x435;&#x442; &#x43a;&#x430;&#x43a;&#x43e;&#x433;&#x43e; &#x442;&#x438;&#x43f;&#x430; &#x444;&#x430;&#x439;&#x43b; &#x431;&#x443;&#x434;&#x435;&#x442; &#x441;&#x43e;&#x437;&#x434;&#x430;&#x432;&#x430;&#x442;&#x44c;&#x441;&#x44f; &#x43a;&#x430;&#x43a; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x438;. &#x412;&#x43e;&#x437;&#x43c;&#x43e;&#x436;&#x43d;&#x44b;&#x435; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43d;&#x442;&#x44b; pom, jar, war, ear
+
+
+             
+            <p>&#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x43b;&#x443;&#x447;&#x448;&#x435; &#x440;&#x430;&#x441;&#x441;&#x43c;&#x43e;&#x442;&#x440;&#x438;&#x43c; &#x43d;&#x430; &#x43f;&#x440;&#x438;&#x43c;&#x435;&#x440;&#x435; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; <a class="externalLink" href="http://mirrors.ibiblio.org/pub/mirrors/maven2/org/powermock/powermock-core/1.4.6/powermock-core-1.4.6.pom">powermock-core</a>
+                <b>groupId</b> - org.powermock,
+                <b>artifactId</b> - powermock-core ,
+                <b>version</b> - 1.4.6
+            </p>
+
+            <p>
+                &#x422;&#x430;&#x43a;&#x436;&#x435; &#x434;&#x43e;&#x431;&#x430;&#x432;&#x43b;&#x44f;&#x435;&#x442;&#x441;&#x44f; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44f; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x430;&#x44f; &#x43d;&#x435; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x443;&#x435;&#x442;&#x441;&#x44f; &#x441;&#x430;&#x43c;&#x438;&#x43c; &#x43c;&#x430;&#x432;&#x435;&#x43d;&#x43e;&#x43c;, &#x43d;&#x43e; &#x43d;&#x443;&#x436;&#x43d;&#x430; &#x434;&#x43b;&#x44f; &#x43f;&#x440;&#x43e;&#x433;&#x440;&#x430;&#x43c;&#x43c;&#x438;&#x441;&#x442;&#x430; &#x447;&#x442;&#x43e;&#x431;&#x44b; &#x43f;&#x43e;&#x43d;&#x44f;&#x442;&#x44c; &#x43e; &#x447;&#x451;&#x43c; &#x44d;&#x442;&#x43e;&#x442; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;:<br />
+                </p><ul>
+                    <li> &lt;name&gt;powermock-core&lt;/name&gt; &#x43d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; &#x434;&#x43b;&#x44f; &#x447;&#x435;&#x43b;&#x43e;&#x432;&#x435;&#x43a;&#x430;</li>
+                    <li> &lt;description&gt;PowerMock core functionality.&lt;/description&gt; &#x41e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430;</li>
+                    <li> &lt;url&gt;http://www.powermock.org&lt;/url&gt;  &#x441;&#x430;&#x439;&#x442; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430;.</li>
+                  </ul>
+            
+            </div>
+        <div class="section"><h2>&#x417;&#x430;&#x432;&#x438;&#x441;&#x438;&#x43c;&#x43e;&#x441;&#x442;&#x438;<a name="a"></a></h2>
+            <p>
+
+                &#x417;&#x430;&#x432;&#x438;&#x441;&#x438;&#x43c;&#x43e;&#x441;&#x442;&#x438; - &#x441;&#x43b;&#x435;&#x434;&#x443;&#x44e;&#x449;&#x430;&#x44f; &#x43e;&#x447;&#x435;&#x43d;&#x44c; &#x432;&#x430;&#x436;&#x43d;&#x430;&#x44f; &#x447;&#x430;&#x441;&#x442;&#x44c; pom.xml - &#x442;&#x443;&#x442; &#x445;&#x440;&#x430;&#x43d;&#x438;&#x442;&#x44c;&#x441;&#x44f; &#x441;&#x43f;&#x438;&#x441;&#x43e;&#x43a;  &#x432;&#x441;&#x435;&#x445; &#x431;&#x438;&#x431;&#x43b;&#x438;&#x43e;&#x442;&#x435;&#x43a;
+                (&#x437;&#x430;&#x432;&#x438;&#x441;&#x438;&#x43c;&#x43e;&#x441;&#x442;&#x435;&#x439;) &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x44b;&#x435; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x443;&#x44e;&#x441;&#x44f; &#x432; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x435;.    &#x41a;&#x430;&#x436;&#x434;&#x430;&#x44f; &#x431;&#x438;&#x431;&#x43b;&#x438;&#x43e;&#x442;&#x435;&#x43a;&#x430; &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x446;&#x438;&#x440;&#x443;&#x435;&#x442;&#x441;&#x44f;
+                &#x442;&#x430;&#x43a;&#x436;&#x435;   &#x43a;&#x430;&#x43a; &#x438; &#x441;&#x430;&#x43c; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442; - &#x442;&#x440;&#x43e;&#x439;&#x43a;&#x43e;&#x439;  groupId, artifactId, version.
+                &#x41e;&#x431;&#x44a;&#x44f;&#x432;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x437;&#x430;&#x432;&#x438;&#x441;&#x438;&#x43c;&#x43e;&#x441;&#x442;&#x435;&#x439; &#x437;&#x430;&#x43a;&#x43b;&#x44e;&#x447;&#x435;&#x43d;&#x43e; &#x432; &#x442;&#x44d;&#x433;   &lt;dependencies&gt;...&lt;/dependencies&gt;.
+
+                </p><div class="source"><pre>
+                    
+                &lt;dependencies&gt;
+                        &lt;dependency&gt;
+                            &lt;groupId&gt;junit&lt;/groupId&gt;
+                            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+                            &lt;version&gt;4.4&lt;/version&gt;
+                            &lt;scope&gt;test&lt;/scope&gt;
+                        &lt;/dependency&gt;
+                        &lt;dependency&gt;
+                            &lt;groupId&gt;org.powermock&lt;/groupId&gt;
+                            &lt;artifactId&gt;powermock-reflect&lt;/artifactId&gt;
+                            &lt;version&gt;${version}&lt;/version&gt;
+                        &lt;/dependency&gt;
+                        &lt;dependency&gt;
+                            &lt;groupId&gt;org.javassist&lt;/groupId&gt;
+                            &lt;artifactId&gt;javassist&lt;/artifactId&gt;
+                            &lt;version&gt;3.13.0-GA&lt;/version&gt;
+                            &lt;scope&gt;compile&lt;/scope&gt;
+                        &lt;/dependency&gt;
+                    &lt;/dependencies&gt;
+
+                
+
+                </pre></div>
+           
+        </div>
+           <div class="section"><h2>&#x422;&#x44d;&#x433; &lt;build&gt;<a name="a_build"></a></h2>
+            <p>
+                
+               &#x422;&#x44d;&#x433; &lt;build&gt; &#x43d;&#x435; &#x43e;&#x431;&#x44f;&#x437;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x439; &#x442;. &#x43a;. &#x441;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x443;&#x44e;&#x442; &#x437;&#x43d;&#x430;&#x447;&#x435;&#x43d;&#x438;&#x44f; &#x43f;&#x43e; &#x443;&#x43c;&#x43e;&#x43b;&#x447;&#x430;&#x43d;&#x438;&#x44e;. &#x42d;&#x442;&#x43e;&#x442; &#x440;&#x430;&#x437;&#x434;&#x435;&#x43b; &#x441;&#x43e;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44e; &#x43f;&#x43e; &#x441;&#x430;&#x43c;&#x43e;&#x439; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x435;: &#x433;&#x434;&#x435; &#x43d;&#x430;&#x445;&#x43e;&#x434;&#x44f;&#x442;&#x441;&#x44f; &#x438;&#x441;&#x445;&#x43e;&#x434;&#x43d;&#x44b;&#x435; &#x444;&#x430;&#x439;&#x43b;&#x44b;, &#x433;&#x434;&#x435; &#x440;&#x435;&#x441;&#x443;&#x440;&#x441;&#x44b;,
+                &#x43a;&#x430;&#x43a;&#x438;&#x435; &#x43f;&#x43b;&#x430;&#x433;&#x438;&#x43d;&#x44b; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x443;&#x44e;&#x442;&#x441;&#x44f;. &#x41d;&#x430;&#x43f;&#x440;&#x438;&#x43c;&#x435;&#x440;:
+
+
+     </p><div class="source"><pre>
+          
+         &lt;build&gt;
+         &lt;sourceDirectory&gt;src/java&lt;/sourceDirectory&gt;
+            &lt;resources&gt;
+                &lt;resource&gt;
+                    &lt;directory&gt;${basedir}/src/java&lt;/directory&gt;
+                    &lt;includes&gt;
+                    &lt;include&gt;**/*.properties&lt;/include&gt;
+                    &lt;/includes&gt;
+                &lt;/resource&gt;
+            &lt;/resources&gt;
+                 &lt;plugins&gt;
+                     &lt;plugin&gt;
+                         &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                         &lt;artifactId&gt;maven-pmd-plugin&lt;/artifactId&gt;
+                         &lt;version&gt;2.4&lt;/version&gt;
+                     &lt;/plugin&gt;
+                 &lt;/plugins&gt;
+             &lt;/build&gt;
+                    
+   </pre></div>
+                Maven &#x43f;&#x43b;&#x430;&#x433;&#x438;&#x43d;&#x44b; &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43b;&#x44f;&#x44e;&#x442; &#x437;&#x430;&#x434;&#x430;&#x442;&#x44c; &#x434;&#x43e;&#x43f;&#x43e;&#x43b;&#x43d;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x438;&#x44f; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x44b;&#x435; &#x431;&#x443;&#x434;&#x443;&#x442; &#x432;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x44f;&#x442;&#x441;&#x44f; &#x43f;&#x440;&#x438; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x435;.
+                &#x41d;&#x430;&#x43f;&#x440;&#x438;&#x43c;&#x435;&#x440; &#x432; &#x43f;&#x440;&#x438;&#x432;&#x435;&#x434;&#x451;&#x43d;&#x43d;&#x43e;&#x43c; &#x43f;&#x440;&#x438;&#x43c;&#x435;&#x440;&#x435; &#x434;&#x43e;&#x431;&#x430;&#x432;&#x43b;&#x435;&#x43d; &#x43f;&#x43b;&#x430;&#x433;&#x438;&#x43d; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x44b;&#x439; &#x430;&#x432;&#x442;&#x43e;&#x43c;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438; &#x434;&#x435;&#x43b;&#x430;&#x435;&#x442; &#x43f;&#x440;&#x43e;&#x432;&#x435;&#x440;&#x43a;&#x443; &#x43a;&#x43e;&#x434;&#x430; &#x43d;&#x430; &#x43d;&#x430;&#x43b;&#x438;&#x447;&#x438;&#x435; &quot;&#x43f;&#x43b;&#x43e;&#x445;&#x43e;&#x433;&#x43e;&quot; &#x43a;&#x43e;&#x434;&#x430; &#x438; &#x43f;&#x43e;&#x442;&#x435;&#x43d;&#x446;&#x438;&#x430;&#x43b;&#x44c;&#x43d;&#x44b;&#x445; &#x43e;&#x448;&#x438;&#x431;&#x43e;&#x43a;.
+                &#x421;&#x43c; <a class="externalLink" href="http://pmd.sourceforge.net/">&#x441;&#x441;&#x44b;&#x43b;&#x43a;&#x430;</a>.
+               
+               <p>
+                   &#x427;&#x438;&#x442;&#x430;&#x439;&#x442;&#x435; &#x431;&#x43e;&#x43b;&#x435;&#x435; &#x43f;&#x43e;&#x434;&#x440;&#x43e;&#x431;&#x43d;&#x435;&#x435; <a href="plugins">&#x43e; &#x43f;&#x43b;&#x430;&#x433;&#x438;&#x43d;&#x430;&#x445;</a>
+            </p>
+        </div>
+        
+    
+      </div>
+
+
+    </div>
+    <div class="clear">
+      <hr/>
+
+    </div>
+    <div id="footer">
+
+      <div class="xright">&#169;  
+          2011
+    
+          
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

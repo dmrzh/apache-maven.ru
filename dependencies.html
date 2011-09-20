@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Руководство по Maven - Project Dependencies</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href="http://www.apache-maven.ru/" id="bannerLeft">
+    
+                                            <img src="images/apache-maven-project-2.png" alt="" />
+    
+            </a>
+                          <span id="bannerRight">
+    
+                                            <img src="images/maven-logo-2.gif" alt="" />
+    
+            </span>
+            <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Last Published: 2011-09-21
+                      </div>
+            <div class="xright">            <a href="http://maven.apache.org/" class="externalLink">maven.apache.org</a>
+            |
+                <a href="http://www.log4j.ru/" class="externalLink">log4j.ru</a>
+            |
+                <a href="http://www.rzhevskiy.info/" class="externalLink">Ржевский Дмитрий</a>
+            
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+    
+                   <h5>О Maven</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Что такое Maven и для чего нужен</a>
+          </li>
+              
+    <li class="none">
+                    <a href="install.html">Установка</a>
+          </li>
+              
+    <li class="none">
+                    <a href="quick_start.html">Начало</a>
+          </li>
+              
+    <li class="none">
+                    <a href="project-file.html">Файл проекта pom.xml</a>
+          </li>
+              
+    <li class="none">
+                    <a href="repository.html">Репозиторий</a>
+          </li>
+              
+    <li class="none">
+                    <a href="lifecycle.html">жизненый цикл сборки: фазы сборки</a>
+          </li>
+              
+    <li class="none">
+                    <a href="profiles.html">Профили</a>
+          </li>
+              
+    <li class="none">
+                    <a href="maven_vs_ant.html">Сравнение maven и ant</a>
+          </li>
+              
+    <li class="none">
+                    <a href="continuous-integration.html">Непрерывная интеграция</a>
+          </li>
+              
+    <li class="none">
+                    <a href="faq.html">FAQ</a>
+          </li>
+          </ul>
+              <h5>дополнительно</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="http://forum.java7.ru/" class="externalLink">Форумы</a>
+          </li>
+              
+    <li class="none">
+                    <a href="links.html">Ссылки</a>
+          </li>
+          </ul>
+              <h5>Maven 3</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="newFeatures.html">Что нового в Maven 3</a>
+          </li>
+          </ul>
+              <h5>Плагины</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="plugins/index.html">Общая информация</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-archetype-plugin.html">maven-archetype-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-compiler-plugin.html">maven-compiler-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-surefire-plugin.html">maven-surefire-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-source-plugin.html">maven-source-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-javadoc-plugin.html">maven-javadoc-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugins/maven-site-plugin.html">maven-site-plugin</a>
+          </li>
+          </ul>
+                                                 
+                        
+                        
+            <a href="http://maven.apache.org/" title="Maven" class="poweredBy">
+                            <img alt="Maven" src="http://maven.apache.org/images/logos/maven-feather.png" />
+            </a>
+                            <!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1931543" target="_top">'+
+'<img src="http://d9.c7.bd.a1.top.mail.ru/counter?id=1931543;t=131;js='+js+
+a+';rand='+Math.random()+'" alt="Ð ÐµÐ¹ÑÐ¸Ð½Ð³@Mail.ru" border="0" '+
+'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_top" href="http://top.mail.ru/jump?from=1931543">
+<img src="http://d9.c7.bd.a1.top.mail.ru/counter?js=na;id=1931543;t=131"
+height="40" width="88" border="0" alt="Ð ÐµÐ¹ÑÐ¸Ð½Ð³@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+        <!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter9257623 = new Ya.Metrika({id:9257623, enableAll: true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/9257623" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+        <!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6362918;
+var sc_invisible=1;
+var sc_security="2b6fa6ba";
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free_web_stats.html"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6362918/0/2b6fa6ba/1/"
+alt="free web stats" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+        <script type="text/javascript" src="/js/orphus.js"></script>
+<a href="http://orphus.ru" id="orphus" target="_blank">
+    <img alt="Orphus" src="/images/orphus.gif" border="0"  />
+</a>
+           
+  
+
+  
+    
+  
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+     <div style="float: right;">
+          <script type="text/javascript"><!--
+google_ad_client = "pub-1556989629349199";
+/* maven 120x600, ÑÐ¾Ð·Ð´Ð°Ð½Ð¾ 24.10.10 */
+google_ad_slot = "2290603997";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+          </div>
+
+      <div id="contentBox">
+        <div class="section"><h2>Project Dependencies<a name="Project_Dependencies"></a></h2><div class="section"><h3>test<a name="test"></a></h3><p>The following is a list of test dependencies for this project. These dependencies are only required to compile and run unit tests for the application:</p><table border="0" class="bodyTable"><tr class="a"><th>GroupId</th><th>ArtifactId</th><th>Version</th><th>Type</th></tr><tr class="b"><td>junit</td><td><a class="externalLink" href="http://junit.org">junit</a></td><td>4.8.1</td><td>jar</td></tr></table></div></div><div class="section"><h2>Project Transitive Dependencies<a name="Project_Transitive_Dependencies"></a></h2><p>No transitive dependencies are required for this project.</p></div><div class="section"><h2>Project Dependency Graph<a name="Project_Dependency_Graph"></a></h2><script language="javascript" type="text/javascript">
+      function toggleDependencyDetail( divId, imgId )
+      {
+        var div = document.getElementById( divId );
+        var img = document.getElementById( imgId );
+        if( div.style.display == '' )
+        {
+          div.style.display = 'none';
+          img.src='./images/icon_info_sml.gif';
+        }
+        else
+        {
+          div.style.display = '';
+          img.src='./images/close.gif';
+        }
+      }
+</script>
+<div class="section"><h3>Dependency Tree<a name="Dependency_Tree"></a></h3><ul><li><p>ru.apache-maven:site:war:1.0-SNAPSHOT <img id="_727568922" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1717247910', '_727568922' );" style="cursor: pointer;vertical-align:text-bottom;"></img></p><div id="_1717247910" style="display:none"><table border="0" class="bodyTable"><tr class="a"><th>Unnamed - ru.apache-maven:site:war:1.0-SNAPSHOT</th></tr><tr class="b"><td><p><b>Description: </b>There is currently no description associated with this project.</p><p><b>Project License: </b>No project license is defined for this project.</p></td></tr></table></div><ul><li><p>junit:junit:jar:4.8.1 (test) <img id="_147171147" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_553335357', '_147171147' );" style="cursor: pointer;vertical-align:text-bottom;"></img></p><div id="_553335357" style="display:none"><table border="0" class="bodyTable"><tr class="a"><th>JUnit</th></tr><tr class="b"><td><p><b>Description: </b>JUnit is a regression testing framework written by Erich Gamma and Kent Beck. It is used by the developer who implements unit tests in Java.</p><p><b>URL: </b><a class="externalLink" href="http://junit.org">http://junit.org</a></p><p><b>Project License: </b><a class="externalLink" href="http://www.opensource.org/licenses/cpl1.0.txt">Common Public License Version 1.0</a></p></td></tr></table></div></li></ul></li></ul></div></div><div class="section"><h2>Licenses<a name="Licenses"></a></h2><p><b>Unknown: </b>Unnamed - ru.apache-maven:site:war:1.0-SNAPSHOT</p><p><b>Common Public License Version 1.0: </b>JUnit</p></div><div class="section"><h2>Dependency File Details<a name="Dependency_File_Details"></a></h2><table border="1" class="bodyTable"><tr class="a"><th>Filename</th><th>Size</th><th>Entries</th><th>Classes</th><th>Packages</th><th>JDK Rev</th><th>Debug</th></tr><tr class="b"><td>junit-4.8.1.jar</td><td>231.49 kB</td><td>267</td><td>230</td><td>30</td><td>1.5</td><td>debug</td></tr><tr class="a"><th>Total</th><th>Size</th><th>Entries</th><th>Classes</th><th>Packages</th><th>JDK Rev</th><th>Debug</th></tr><tr class="b"><td>1</td><td>231.49 kB</td><td>267</td><td>230</td><td>30</td><td>1.5</td><td>1</td></tr><tr class="a"><td>test: 1</td><td>test: 231.49 kB</td><td>test: 267</td><td>test: 230</td><td>test: 30</td><td>-</td><td>test: 1</td></tr></table></div><div class="section"><h2>Dependency Repository Locations<a name="Dependency_Repository_Locations"></a></h2><table border="1" class="bodyTable"><tr class="a"><th>Repo ID</th><th>URL</th><th>Release</th><th>Snapshot</th></tr><tr class="b"><td>central</td><td><a class="externalLink" href="http://repo1.maven.org/maven2">http://repo1.maven.org/maven2</a></td><td>Yes</td><td>-</td></tr></table><p>Repository locations for each of the Dependencies.</p><table border="1" class="bodyTable"><tr class="a"><th>Artifact</th><th>central</th></tr><tr class="b"><td>junit:junit:jar:4.8.1</td><td><a class="externalLink" href="http://repo1.maven.org/maven2/junit/junit/4.8.1/junit-4.8.1.jar"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td></tr><tr class="a"><th>Total</th><th>central</th></tr><tr class="b"><td>1 (test: 1)</td><td>1</td></tr></table></div>
+      </div>
+
+
+    </div>
+    <div class="clear">
+      <hr/>
+
+    </div>
+    <div id="footer">
+
+      <div class="xright">&#169;  
+          2011
+    
+          
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>
