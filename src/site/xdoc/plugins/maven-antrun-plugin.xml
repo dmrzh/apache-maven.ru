@@ -16,7 +16,7 @@
     <body>
         <section name="maven-antrun-plugin">
             <p>
-                maven-antrun-plugin - это плагин для запуска ant скриптов.
+                maven-antrun-plugin - это плагин для запуска <a href="http://ant.apache.org/">Ant</a> скриптов.
                 Если для сборки проекта подходящего плагина нет, но вы знаете как его собрать с помощью ant
                 то можно воспользоваться  maven-antrun-plugin.
                 <source><![CDATA[<project>
@@ -36,9 +36,8 @@
               <target>
 
                 <!--
-                  Place any Ant task here. You can add anything
-                  you can add between <target> and </target> in a
-                  build.xml.
+                 Здесь можно расположить любые Ant задачи -  то,
+                 что расположено между тэгами <target> и </target> в build.xml
                 -->
                  <echo message="maven-antrun-plugin:run: hello world"/>
 

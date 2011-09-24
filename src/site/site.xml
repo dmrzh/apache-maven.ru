@@ -58,6 +58,7 @@
             <item name="maven-source-plugin"    href="plugins/maven-source-plugin.html"/>
             <item name="maven-javadoc-plugin"    href="plugins/maven-javadoc-plugin.html"/>
             <item name="maven-site-plugin"    href="plugins/maven-site-plugin.html"/>
+            <item name="maven-antrun-plugin"    href="plugins/maven-antrun-plugin.html"/>
         </menu>
     </body>
 
