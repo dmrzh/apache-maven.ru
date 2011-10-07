@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>maven-checkstyle-plugin</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="maven-checkstyle-plugin, checkstyle, java, maven, ant, about, ява, стиль, исходный код, мавен, ьфмут"/>
+        <title>maven-checkstyle-plugin</title>
+    </head>
+
+
+    <body>
+        <section name="maven-checkstyle-plugin">
+            <p>
+                Это очень полезный плагин. Плагин проверяет стиль и качество исходного кода. Проверка качества кода особенно актуальна при разработке в команде из нескольких программистов. Автоматизация такой проверки - большая помощь в этой нудной и кропотливой работе.
+             </p>
+             <p>
+                Плагин основан на проекте <a href="http://checkstyle.sourceforge.net/">http://checkstyle.sourceforge.net/</a>.
+                Из наиболее часто используемых и простых проверок:
+                 <ul>
+                     <li>наличие комментариев</li>
+                     <li>размер класса не более N строк</li>
+                     <li>в конструкции в try-catch, блок catch не пустой.</li>
+                     <li>не используется System.out.println(.. вместо LOG.error(..</li>
+                 </ul>
+             </p>
+             <p>
+                 Подключить плагин довольно просто:
+                <source><![CDATA[
+..
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>2.7</version>
+        </plugin>
+...........]]></source>
+
+                после этого можно запустить проверку кода:
+                 <source>mvn checkstyle:check</source>
+
+                Плагин проверит исходный код на наличие <a href="http://checkstyle.sourceforge.net/availablechecks.html">нарушений</a>  и сгенерирует файл checkstyle-result.xml.
+
+                Чекстайл удобно использовать совместно с <a href="../continuous-integration.html"> непрерывной интеграцией</a>. Автоматическая проверка кода сильно экономит время.
+                <b>Самое важное</b> - относиться к checkstyle ошибкам также как и ошибкам компиляции -  при из возникновении сразу исправлять,
+                 т.к. когда ошибок накапливается сотни, их исправлять и тратить время хочется ещё меньше..
+                 Если checkstyle ошибки исправляются как только они появятся- весь код будет чисто написан и комментирован, и можно быть больше уверенным в его качестве.
+                </p>
+                <p>
+                Т.к. почти каждые проекты пишутся немного по-разному, рекомедую создать свой набор правил.
+                Полный набор правил описан тут:
+                    <a href="http://checkstyle.sourceforge.net/availablechecks.html">http://checkstyle.sourceforge.net/availablechecks.html</a>
+                    и задать его можно в специальном конфигурационном файле.
+                    (см. <a href="http://checkstyle.sourceforge.net/config.html">http://checkstyle.sourceforge.net/config.html</a>)
+                    пример файла со сравнительно нестрогой проверкой приведён...
+
+                </p>
+                <p>
+                Если каком то месте кода появляется ошибка, но по объективным причинам код такой и должен быть, можно  подавить  вывод ошбки
+                используя модуль SuppressionCommentFilter или SuppressionFilter
+                </p>
+        </section>
+
+        <section name="Пример объявления maven-checkstyle-plugin из реально работающего кода ">
+            <source> <![CDATA[<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-checkstyle-plugin</artifactId>
+    <version>2.6</version>
+    <configuration>
+        <configLocation>]]><a href="checkstyle.xml">src/config/checkstyle.xml</a><![CDATA[</configLocation>
+            <consoleOutput>true</consoleOutput>
+        </configuration>
+        <executions>
+            <execution>
+                <phase>package</phase>
+                <goals><goal>check</goal></goals>
+            </execution>
+        </executions>
+</plugin>]]></source>
+            <p>
+
+            </p>
+        </section>
+    </body>
+</document>
