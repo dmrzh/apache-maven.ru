@@ -23,7 +23,7 @@
                 </li>
                 <li>
                     Установите переменную окружения PATH
-                    В Windows в переменной PATH добавьте к списку директорий строку %M2_HOME%/bin".
+                    В Windows в переменной PATH добавьте к списку директорий строку %M2_HOME%\bin".
                     В Linux можно добавить строку "export PATH=$PATH:$M2_HOME/bin"в файл /etc/profile .
 
                 </li>
