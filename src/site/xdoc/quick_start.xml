@@ -24,7 +24,7 @@
                 Выберете проект и его вресию по умолчанию,  нажав Enter, Enter далее команда спросит,
                 <i>groupId</i>
                 и
-                <i>artifcactId</i>
+                <i>artifactId</i>
                 введите данные:
                 <br/>
                 <i>ru.apache_maven</i>
