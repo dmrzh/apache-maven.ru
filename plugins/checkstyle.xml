@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.1//EN"
+        "http://www.puppycrawl.com/dtds/configuration_1_1.dtd">
+
+<!-- commons lang customization of default Checkstyle behavior -->
+<module name="Checker">
+    <property name="localeLanguage" value="en"/>
+    <module name="JavadocPackage">
+        <!-- setting allowLegacy means it will check for package.html instead of just package-info.java -->
+    </module>
+    <module name="FileTabCharacter">
+        <property name="fileExtensions" value="java,xml"/>
+    </module>
+    <module name="TreeWalker">
+
+        <module name="EmptyBlock"/>
+        <module name="LeftCurly"/>
+        <module name="NeedBraces"/>
+        <module name="RightCurly"/>
+        <module name="AvoidNestedBlocks"/>
+
+
+        <module name="VisibilityModifier"/>
+        <module name="FinalClass"/>
+        <module name="InterfaceIsType"/>
+        <module name="HideUtilityClassConstructor"/>
+        <!--<module name="MutableException"/>-->
+        <module name="ThrowsCount">
+            <property name="max" value="2"/>
+        </module>
+        <!--<module name="InnerTypeLast"/> cant find-->
+
+        <module name="AvoidStarImport"/>
+        <module name="RedundantImport"/>
+        <module name="UnusedImports"/>
+        <module name="NeedBraces"/>
+        <module name="RedundantThrows">
+            <property name="allowUnchecked" value="true"/>
+            <property name="allowSubclasses" value="true"/>
+        </module>
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+        <module name="JavadocType"/>
+
+        <module name="JavadocMethod">
+            <property name="scope" value="package"/>
+            <property name="allowMissingPropertyJavadoc" value="true"/>
+            <property name="tokens" value="METHOD_DEF"/>
+            <property name="allowUndeclaredRTE" value="true"/>
+            <property name="allowThrowsTagsForSubclasses" value="true"/>
+        </module>
+    </module>
+    <module name="FileLength">
+        <property name="max" value="700"/>
+    </module>
+</module>
