@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>maven-pmd-plugin</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="pmd, maven-pmd-plugin,quality, automatic code review,  качество кода, continuous integration, копипаст, копи-паст, maven, здгпшт, plugin, плагин, ява, мавен, плагины, ьфмут"/>
+        <title> maven-pmd-plugin</title>
+    </head>
+
+
+    <body>
+        <section name="maven-javadoc-plugin">
+            <p>
+                maven-pmd-plugin - плагин для автоматического анализа кода на предмет наличия "нехорошего кода".
+                Также в этом плагине есть цель которая находит дубликаты кода Copy/Paste Detector (CPD).
+                Основан на проекте a <a href="http://pmd.sourceforge.net/">http://pmd.sourceforge.net/</a>
+            </p>
+            <p>
+
+            Существует два режима работы плагина:
+                <ol>
+                <li>генерирование отчётов PMD и CPD (цели pmd:pmd  pmd:cpd)
+                полезно для оценки качества существующих проектов которые раньше не использовали эти инструменты. Позволяет оценить масштабы "бедствия".
+                </li>
+                <li>Проверяют проект на наличие нарушений. В случае если находится нарушение сборка ломается(цели pmd:check pmd:cpd-check ).
+                 Удобно использовать в самом начале проекта совместно с непрерывной интеграцией. Гарантирует что код всегда "чистый". Экономит много времени ревизии кода (code review).
+                Позволяет сделать разработку более масштабируемой.
+                </li>
+                </ol>
+            </p>
+            <p>
+
+                Пример декларирования плагина для второго случая:
+ <source> <![CDATA[
+ <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-pmd-plugin</artifactId>
+    <version>2.5</version>
+    <configuration>
+        <targetJdk>1.6</targetJdk>
+        <verbose>true</verbose>
+    </configuration>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals><goal>check</goal></goals>
+        </execution>
+    </executions>
+ </plugin>]]></source> </p>
+        </section>
+    </body>
+
+</document>

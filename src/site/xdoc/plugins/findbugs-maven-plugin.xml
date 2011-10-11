@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>findbugs-maven-plugin</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content=" findbugs-maven-plugin,quality, automatic code review,  качество кода, continuous integration, java, maven, здгпшт, plugin, плагин, ява, мавен, плагины, ьфмут"/>
+        <title> maven-archetype-plugin</title>
+    </head>
+
+
+    <body>
+        <section name="findbugs-maven-plugin">
+            <p>
+                findbugs-maven-plugin  плагин для автоматического нахождения багов в проекте. Плагин основан на проекте
+                <a href="http://findbugs.sourceforge.net">http://findbugs.sourceforge.net/</a>.
+             </p><p>
+                Принцип действия плагина основан на  поиске шаблонов ошибок.
+                Код проекта проверяются на часто встречаемые ошибки, неправильное использование API и конструкций языка.
+              </p>
+              <p>
+               Рекомендуется использовать в  <a href="../continuous-integration.html">непрерывной интеграции</a> совместно с
+                <a href="maven-pmd-plugin.html">maven-pmd-plugin</a> и <a href="maven-checkstyle-plugin.html">maven-checkstyle-plugin</a>
+
+           </p>
+            <p>
+            Ссылки: <br/>
+               <a href="http://mojo.codehaus.org/findbugs-maven-plugin/">http://mojo.codehaus.org/findbugs-maven-plugin/</a>   <br/>
+                <a href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>
+            </p>
+        </section>
+    </body>
+
+</document>

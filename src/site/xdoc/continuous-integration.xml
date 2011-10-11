@@ -16,15 +16,20 @@
     <body>
         <section name="Что такое Continious Integration">
             <p>
-                Непрерывная интеграция ( Continuous Integration, CI)- это автоматическая сборка проекта из исходного кода, при этом дополнительно возможен запуск
-                автоматических тестов (см.
+                Непрерывная интеграция ( Continuous Integration, CI)- это
+                <li>автоматическая сборка проекта из исходного кода,</li>
+
+                <li>при этом дополнительно возможен запуск автоматических тестов</li> (см.
                 <a href="http://maven.apache.org/plugins/maven-surefire-plugin/">maven-surefire-plugin</a>,
                 <a href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a>
                 )
-                проверка качества кода (см.
-                <a href="http://maven.apache.org/plugins/maven-pmd-plugin/">maven-pmd-plugin</a>,
+                <li>проверка качества кода</li> (см.
+                <a href="plugins/maven-pmd-plugin.html">maven-pmd-plugin</a>,
                 <a href="plugins/maven-checkstyle-plugin.html">maven-checkstyle-plugin</a>
-                <a href="http://mojo.codehaus.org/findbugs-maven-plugin/">findbugs-maven-plugin</a> ), развёртывание приложения на тестовом сервере (для серверных приложений). <br/>
+                <a href="plugins/findbugs-maven-plugin.html">findbugs-maven-plugin</a> ),
+                <li>развёртывание приложения на тестовом сервере (для серверных приложений).</li>
+
+                <br/>
                 Сборка проекта происходиит при изменени исходного кода проекта или/и по расписанию.<br/>
                 В результате достигается:
                 <ul>
@@ -34,6 +39,10 @@
                     <li>
                        автоматизация рутинных операций
                     </li>
+                    <li>
+                       как результат - экономия времени и повышение качества кода.
+                    </li>
+
                 </ul>
                 Особенно актуально использование непрерывной интеграции если над проектом работает несколько человек -
                 сразу становится понятно кто,что и когда сломал.
