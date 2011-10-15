@@ -40,14 +40,8 @@
             <item name="Непрерывная интеграция" href="continuous-integration.html"/>
             <item name="FAQ" href="faq.html"/>
         </menu>
-        <menu name="дополнительно">
-            <item name="Форумы" href="http://forum.java7.ru/"/>
-            <item name="Ссылки" href="links.html"/>
-        </menu>
-        <menu name="Maven 3">
-            <item name="Что нового в Maven 3" href="newFeatures.html"/>
 
-        </menu>
+
         <menu name="Плагины">
             <item name="Общая информация"    href="plugins/index.html"/>
             <item name="maven-archetype-plugin"    href="plugins/maven-archetype-plugin.html"/>
@@ -62,6 +56,11 @@
             <item name="maven-checkstyle-plugin" href="plugins/maven-checkstyle-plugin.html"/>
             <item name="maven-pmd-plugin"        href="plugins/maven-pmd-plugin.html"/>
             <item name="findbugs-maven-plugin"   href="plugins/findbugs-maven-plugin.html"/>
+        </menu>
+
+        <menu name="дополнительно">
+            <item name="Форумы" href="http://forum.java7.ru/"/>
+            <item name="Ссылки" href="links.html"/>
         </menu>
     </body>
 

@@ -60,13 +60,18 @@
                 Существуют ещё продукты, которые менее распространены.
             </p>
         </section>
-        <!--<section name="Минимальная конфигурация">-->
-            <!--<p>-->
-               <!--Чтобы настроить ci в самом простейшем виде нужно установить один из приведённых выше инструментов, добавить новый проект указав систему контроля версий,-->
-                <!--и настроить как вас должен уведомлять ci-сервер. Своевременное уведомление очен важно.-->
+        <section name="Ссылки">
+            <p>
+                <ul>
+                    <li>
+                        <a href="http://automated-testing.info/knowledgebase/article/zapusk-selenium-testov-s-pomoshhju-hudson-na-headless-linux-server-chast-1-xvf">
+                            Запуск Selenium тестов с помощью Hudson на Headless Linux Server
+                        </a>
+                    </li>
+                </ul>
 
-            <!--</p>-->
-        <!--</section>-->
+            </p>
+        </section>
 
         </body>
     </document>
