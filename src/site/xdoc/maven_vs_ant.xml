@@ -43,7 +43,7 @@
             а в новой версии вместо него используется <a href="http://www.log4j.ru/articles/Slf4jAndCommonsLoggingPage.html">slf4j</a>.
             Получается commons-logging уже не нужен, можно удалить. А вы точно уверены что можно удалить?
             А если commons-logging успользуется в другой библиотеке? И действительно, внутри struts есть commons-logging.
-            удалять нельзя - иначе получешь ClassNotFoundException во время выолнения программы.
+            удалять нельзя - иначе получишь ClassNotFoundException во время выполнения программы.
             Тут я вам описал случай с двумя библиотеками Hibernate и Struts. А если библиотек много?
             Пожалуй тут лучше воспользоваться <a href="http://ant.apache.org/ivy/">ivy</a>..
         </p>
