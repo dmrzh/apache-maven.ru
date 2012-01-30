@@ -14,7 +14,7 @@
 
 
     <body>
-        <section name="maven-archetype-plugin">
+        <section name="maven-site-plugin">
             <p>
                 Плагин maven-site-plugin предназначен для того чтобы легко создавать сайт проекта.
                 В директории Вашего проекта наберите
