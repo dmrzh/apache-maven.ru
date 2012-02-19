@@ -19,6 +19,7 @@
 
 
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>Руководство по Maven - 
@@ -58,7 +59,7 @@
   
     
             <div class="xleft">
-        Last Published: 2012-01-30
+        Last Published: 2012-02-19
                       </div>
             <div class="xright">            <a href="http://maven.apache.org/" class="externalLink">maven.apache.org</a>
             |
@@ -117,6 +118,10 @@
               
     <li class="none">
                     <a href="profiles.html">Профили</a>
+          </li>
+              
+    <li class="none">
+                    <a href="webapp.html">Разработка Веб-приложений</a>
           </li>
               
     <li class="none">
@@ -280,12 +285,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <p>
               &#x412;&#x43e;-&#x43f;&#x435;&#x440;&#x432;&#x44b;&#x445; &#x432; &#x43e;&#x442;&#x43b;&#x438;&#x447;&#x438;&#x438; &#x43e;&#x442; Ant,  Maven &#x445;&#x43e;&#x440;&#x43e;&#x448;&#x43e; &#x438;&#x43d;&#x442;&#x435;&#x433;&#x440;&#x438;&#x440;&#x443;&#x435;&#x442;&#x441;&#x44f; &#x441;&#x43e; &#x432;&#x441;&#x435;&#x43c;&#x438; &#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x43d;&#x44b;&#x43c;&#x438; &#x441;&#x440;&#x435;&#x434;&#x430;&#x43c;&#x438; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43e;&#x442;&#x43a;&#x438;.
                 &#x415;&#x441;&#x43b;&#x438; &#x432; &#x432;&#x430;&#x448;&#x435;&#x439; &#x43a;&#x43e;&#x43c;&#x430;&#x43d;&#x434;&#x435; &#x43f;&#x440;&#x435;&#x434;&#x43f;&#x43e;&#x447;&#x438;&#x442;&#x430;&#x44e;&#x442; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x430;&#x442;&#x44c; &#x432; &#x440;&#x430;&#x437;&#x43d;&#x44b;&#x445; &#x441;&#x440;&#x435;&#x434;&#x430;&#x445; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43e;&#x442;&#x43a;&#x438;, &#x442;&#x43e; &#x43d;&#x435; &#x43d;&#x443;&#x436;&#x43d;&#x43e; &#x43e;&#x433;&#x440;&#x430;&#x43d;&#x438;&#x447;&#x438;&#x432;&#x430;&#x442;&#x44c; - &#x43f;&#x443;&#x441;&#x442;&#x44c;
-                &#x43a;&#x430;&#x436;&#x434;&#x44b;&#x439; &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x443;&#x435;&#x442;&#x441;&#x44f; &#x447;&#x435;&#x43c; &#x435;&#x43c;&#x443; &#x44d;&#x442;&#x43e; &#x43d;&#x440;&#x430;&#x432;&#x438;&#x442;&#x441;&#x44f;. &#x412; &#x43b;&#x44e;&#x431;&#x43e;&#x439; &#x441;&#x440;&#x435;&#x434;&#x435; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442; &#x43e;&#x442;&#x43a;&#x440;&#x44b;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44f; &#x441;&#x440;&#x430;&#x437;&#x443; &#x443;&#x436;&#x435; &#x43d;&#x430;&#x441;&#x442;&#x440;&#x43e;&#x435;&#x43d;&#x43d;&#x44b;&#x439;.
+                &#x43a;&#x430;&#x436;&#x434;&#x44b;&#x439; &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x443;&#x435;&#x442;&#x441;&#x44f; &#x442;&#x435;&#x43c;, &#x447;&#x442;&#x43e; &#x435;&#x43c;&#x443; &#x43d;&#x440;&#x430;&#x432;&#x438;&#x442;&#x441;&#x44f;. &#x412; &#x43b;&#x44e;&#x431;&#x43e;&#x439; &#x441;&#x440;&#x435;&#x434;&#x435; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442; &#x43e;&#x442;&#x43a;&#x440;&#x44b;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44f; &#x441;&#x440;&#x430;&#x437;&#x443; &#x443;&#x436;&#x435; &#x43d;&#x430;&#x441;&#x442;&#x440;&#x43e;&#x435;&#x43d;&#x43d;&#x44b;&#x439;.
             </p>
             <p>
             &#x412;&#x43e; &#x432;&#x442;&#x43e;&#x440;&#x44b;&#x445; &#x445;&#x43e;&#x440;&#x43e;&#x448;&#x43e; &#x435;&#x441;&#x43b;&#x438; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x430; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; &#x43c;&#x43e;&#x436;&#x435;&#x442; &#x43f;&#x440;&#x43e;&#x438;&#x441;&#x445;&#x43e;&#x434;&#x438;&#x442;&#x44c; &#x441;&#x43e;&#x432;&#x441;&#x435;&#x43c; &#x431;&#x435;&#x437; IDE.
                 &#x414;&#x43b;&#x44f; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x438; Ant'&#x43e;&#x43c; &#x442;&#x43e; &#x437;&#x43d;&#x430;&#x447;&#x438;&#x442; &#x43f;&#x43e;&#x434;&#x434;&#x435;&#x440;&#x436;&#x438;&#x432;&#x430;&#x442;&#x44c; &#x441;&#x43a;&#x440;&#x438;&#x43f;&#x442;&#x44b; &#x434;&#x43b;&#x44f; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x438; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x44b;&#x435; &#x434;&#x443;&#x431;&#x43b;&#x438;&#x440;&#x443;&#x44e;&#x442; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44e; &#x432; &#x444;&#x430;&#x439;&#x43b;&#x430;&#x445; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; &#x43a;&#x43e;&#x43d;&#x43a;&#x440;&#x435;&#x442;&#x43d;&#x43e;&#x439; IDE.
-                &#x417;&#x430;&#x447;&#x430;&#x441;&#x442;&#x443;&#x44e;  build.xml (&#x444;&#x430;&#x439;&#x43b; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x438; &#x432; Ant) &#x443;&#x441;&#x442;&#x430;&#x440;&#x435;&#x432;&#x430;&#x435;&#x442; &#x438; &#x43f;&#x435;&#x440;&#x435;&#x441;&#x442;&#x430;&#x451;&#x442; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x430;&#x442;&#x44c; &#x442;.&#x43a;. &#x438;&#x43c;&#x438; &#x43a;&#x430;&#x436;&#x434;&#x43e;&#x434;&#x43d;&#x435;&#x432;&#x43d;&#x43e; &#x43d;&#x435; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x443;&#x44e;&#x442;&#x441;&#x44f;.
+                &#x417;&#x430;&#x447;&#x430;&#x441;&#x442;&#x443;&#x44e;  build.xml (&#x444;&#x430;&#x439;&#x43b; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x438; &#x432; Ant) &#x443;&#x441;&#x442;&#x430;&#x440;&#x435;&#x432;&#x430;&#x435;&#x442; &#x438; &#x43f;&#x435;&#x440;&#x435;&#x441;&#x442;&#x430;&#x451;&#x442; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x430;&#x442;&#x44c; &#x442;.&#x43a;. &#x438;&#x43c; &#x43a;&#x430;&#x436;&#x434;&#x43e;&#x434;&#x43d;&#x435;&#x432;&#x43d;&#x43e; &#x43d;&#x435; &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x443;&#x44e;&#x442;&#x441;&#x44f;.
             </p>
         </div>
         <div class="section"><h2>&#x423;&#x43f;&#x440;&#x430;&#x432;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x437;&#x430;&#x432;&#x438;&#x441;&#x438;&#x43c;&#x43e;&#x441;&#x442;&#x44f;&#x43c;&#x438; &#x432; Ant<a name="a___Ant"></a></h2>
@@ -331,25 +336,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         </div>
     
 
-        <br/>
-        <br/>
-        <br/>
-        <hr/>
-        <br/>
-        <br/>
-        <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'apache-maven'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
 
 
@@ -359,6 +345,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
     </div>
     <div id="footer">
+
       <div class="xright">&#169;  
           2012
     
