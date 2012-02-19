@@ -36,6 +36,8 @@
             <item name="жизненый цикл сборки: фазы сборки" href="lifecycle.html"/>
             <!-- <item name="Дополнительные настройки" href="optionalSettings.html"/> -->
             <item name="Профили" href="profiles.html"/>
+            <item name="Разработка Веб-приложений" href="webapp.html"/>
+
             <item name="Сравнение maven и ant" href="maven_vs_ant.html"/>
             <item name="Непрерывная интеграция" href="continuous-integration.html"/>
             <item name="FAQ" href="faq.html"/>

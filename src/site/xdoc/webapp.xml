@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <author>Ржевский Дмитрий</author>
+        <title>разработка веб приложений</title>
+    </properties>
+    <meta name="keyword" content="java, maven 3, web application, web.xml, веб приложения "/>
+    <body>
+
+        <section name="Создание с помощью archetype:generate">
+
+
+            <p>
+                Давайте сгенерируем простое web приложение с помощью <a href="plugins/index.html">плагина</a> maven-archetype:plugin.
+                <source>
+                    mvn archetype:generate
+                </source>
+                В результате нам вывалится очень большой список архитипов, и maven предложит вам выбрать.
+                Выбирать в таком списке довольно сложно,
+                поэтому будет удобно если вы отфильтруете этот список.
+                Наберите <source>maven-archetype-webapp</source> и maven предложит вам список из нескольких архитипов.
+
+                <source>
+                    Choose archetype:
+                    1: internal -> org.apache.maven.archetypes:maven-archetype-webapp (A simple Java web application)
+                </source>
+                Выберете  <source> <b>[1]</b> org.apache.maven.archetypes:maven-archetype-webapp.</source>
+                
+                Напишите <br/>
+                groupId : <b>ru.apache-maven</b><br/>
+                artifactId : <b>webapptest</b><br/>
+                а остальные значения можно оставить по умолчанию.<br/>
+                в результате получится проект с такой структурой директорий:
+                <pre>
+├── pom.xml
+└── src
+     └── main
+          ├── resources
+          └── webapp
+              ├── index.jsp
+              └── WEB-INF
+                    └── web.xml
+                </pre>
+            </p>
+            <p>
+                Поздравляю, простейший веб-проект готов. Теперь можно:
+                <ul>
+                <li>собрать с помошью mvn package </li> в результате в директории target образуется testwebapp.war, который можно депоить в сервлет контейнер,
+                    например в <a href="http://tomcat.apache.org/">Apache Tomcat</a>
+                 <li>запустить напрямую: <b>mvn tomcat:run</b></li> В этом случае запустится tomcat и приложение будет сразу доступно по адресу <a href="http://localhost:8080/testwebapp/">http://localhost:8080/testwebapp/</a>
+                </ul>
+
+
+            </p>
+        </section>
+        <section name="Создание веб проекта с нуля">
+           <p>
+               Разработка Веб-приложений
+               Создать Web Веб проект довольно просто- нужно добавить тэг  <![CDATA[<packagin>]]> внутри <![CDATA[<project>]]> и задать в качестве значения значение war:
+               <source><pre><![CDATA[
+               <project xmlns="http://maven.apache.org/POM/4.0.0"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                   http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                   <modelVersion>4.0.0</modelVersion>
+                   <groupId>ru.apache-maven</groupId>
+                   <artifactId>parent-project</artifactId>
+                   <version>1.0-SNAPSHOT</version>
+                   ]]><b>&lt;packaging>war&lt;/packaging></b><![CDATA[
+               </project>]]></pre></source>
+               Всё, веб проект практически готов , осталось создать правильную структуру директорий и файл web.xml.
+               Здесь будет приведена структура директорий по умолчанию, хотя её легко изменить под ваши нужды.
+               <pre>
+├── pom.xml
+└── src
+    └── main
+        ├── java
+        ├── resources
+        └── webapp
+            ├── index.jsp
+            └── WEB-INF
+                 └── web.xml
+              </pre>
+            </p>
+        </section>
+        <section name="Ссылки">
+            Для дальнейшей работы с веб-приложениями советую прочитать:
+            <ul>
+            <li><a href="http://maven.apache.org/plugins/maven-war-plugin/">maven-war-plugin</a></li>
+            <li><a href="http://mojo.codehaus.org/tomcat-maven-plugin/introduction.html">maven-tomcat-plugin</a></li>
+            <li><a href="http://docs.codehaus.org/display/JETTY/Maven+Jetty+Plugin">maven-jetty-plugin</a></li>
+            </ul>
+        </section>
+    </body>
+</document>
