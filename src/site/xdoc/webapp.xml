@@ -7,6 +7,9 @@
     <meta name="keyword" content="java, maven 3, web application, web.xml, веб приложения "/>
     <body>
 
+        <section name="Разработка веб приложений">
+           <br/>
+        </section>
         <section name="Создание с помощью archetype:generate">
 
 
