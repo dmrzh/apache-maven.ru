@@ -39,7 +39,7 @@
             compiler:compile и compiler:testCompile
 
             <ul>
-                <li>compiler:compile - компилирует основную ветку исходников и по умолчанию связана с фазой comile</li>
+                <li>compiler:compile - компилирует основную ветку исходников и по умолчанию связана с фазой compile</li>
                 <li>compiler:testCompile - компилирует тесты и по умолчанию связана с фазой test-compile.</li>
             </ul>
 
