@@ -58,18 +58,26 @@
                 pom.xml - это как раз файл для maven. Его мы будем рассматривать отдельно <a href="project-file.html">более подробно</a>.
             </p>
             <p>
-                Чтобы скомпилировать, запустить junit тесты и собрать jar нужно набрать
-                mvn package
-                Если в консоль выведется
+                Чтобы скомпилировать нужно набрать  в консоли mvn compile. Если в консоль выведется
                 <source>
                     ...
                     [INFO] BUILD SUCCESS
                     .....
                 </source>
-                то сборка прошла успешно и в созданной директории target будет jar c нашей программой:
-                testproject1-1.0-SNAPSHOT.jar
+                то компиляция  прошла успешно и в созданной директории target/classes будут class файлы c нашей программой.
             </p>
-
+            <p>
+                Если вы наберёте mvn package в директории target будет создан jar файл testproject1-1.0-SNAPSHOT.jar
+                давайте запустим
+            </p>
+            <p>
+            давайте запустим скомпилированную нами программу
+            <source>
+            [dima@myhost testproject1]$ java -cp ./target/classes ru.apache_maven.App
+            Hello World!
+            </source>
+            Поздравляю, программа работает!
+            </p>
         </section>
         <section name="Интеграция">
 
@@ -79,11 +87,27 @@
                 <br/>
 
                 <ul>
-                    <li>для среды IntelliJ Idea и NetBeans - проект открывается сразу ("File/OpenProject" или
-                        "Файл/Создать проект/Проект maven с существующим POM")
+                    <li>для среды IntelliJ Idea проект открывается сразу ("File/OpenProject")
                     </li>
-                    <li>Для в eclipse нужно установить соответствующие плагин.(например <a href="http://code.google.com/p/q4e/">http://code.google.com/p/q4e/</a>)
-                    </li>
+                    <li>для среды NetBeans проект открывается сразу ("Файл/Создать проект/Проект maven с существующим POM")</li>
+                </ul>
+            </p>
+        </section>
+        <section name="Установка в eclipse">
+            <p>
+                Для установки
+                <ol>
+                    <li>зайдите в  меню Help->Install New Software</li>
+                    <li>Выберите Work with  --All Available Sites--</li>
+                    <li>в фильтре наберите m2e и отметьте плагины как показано на рисунке</li>
+                </ol>
+                <img src="images/eclipse-maven.png"/>
+                </p>
+            <p>
+                После установки плагина можно:
+                <ul>
+                <li>создавать проекты например через File->New Progect->Maven->Maven Project</li>
+                <li>Открыть существующий проект File->Import->Maven->Existing Maven Projects</li>
                 </ul>
             </p>
         </section>
