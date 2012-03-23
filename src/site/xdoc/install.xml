@@ -10,7 +10,7 @@
             <p>
                 <li>
                 Зайдите на официальный сайт мавен
-                в раздел <a href="http://maven.apache.org/download.html">загрузка</a> и скачайте последнюю стабильную версию.
+                в раздел <a target="_blank" href="http://maven.apache.org/download.html">загрузка</a> и скачайте последнюю стабильную версию.
                 </li>
                 <li>
                     Распакуйте архив   в инсталляционную директорию. Например в C:\Program Files\maven\ в Windows или /opt/maven в Linux

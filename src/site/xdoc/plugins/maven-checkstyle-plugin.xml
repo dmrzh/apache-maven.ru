@@ -57,6 +57,15 @@
                     и задать его можно в специальном конфигурационном файле.
                     (см. <a href="http://checkstyle.sourceforge.net/config.html">http://checkstyle.sourceforge.net/config.html</a>)
                     пример файла со сравнительно нестрогой проверкой приведён...
+                </p>
+                <p>Внутри jar плагина есть примеры конфигурационных файлов:
+
+                    <ul>
+                        <li>config/sun_checks.xml - от Sun Microsystems. Используются  по умолчанию.</li>
+                        <li>config/maven_checks.xml - от Maven.</li>
+                        <li>config/turbine_checks.xml -от Turbine.</li>
+                        <li>config/avalon_checks.xml - от Avalon.</li>
+                    </ul>
 
                 </p>
                 <p>

@@ -33,7 +33,7 @@
 
             <!--<item name="Управление зависимостями" href="dependencyManagement.html"/>-->
             <item name="Репозиторий" href="repository.html"/>
-            <item name="жизненый цикл сборки: фазы сборки" href="lifecycle.html"/>
+            <item name="Жизненый цикл сборки: фазы сборки" href="lifecycle.html"/>
             <!-- <item name="Дополнительные настройки" href="optionalSettings.html"/> -->
             <item name="Профили" href="profiles.html"/>
             <item name="Веб-приложения" href="webapp.html"/>
