@@ -58,7 +58,7 @@
                 pom.xml - это как раз файл для maven. Его мы будем рассматривать отдельно <a href="project-file.html">более подробно</a>.
             </p>
             <p>
-                Чтобы скомпилировать нужно набрать  в консоли mvn compile. Если в консоль выведется
+                Чтобы скомпилировать, нужно набрать  в консоли mvn compile. Если в консоль выведется
                 <source>
                     ...
                     [INFO] BUILD SUCCESS
@@ -68,10 +68,9 @@
             </p>
             <p>
                 Если вы наберёте mvn package в директории target будет создан jar файл testproject1-1.0-SNAPSHOT.jar
-                давайте запустим
             </p>
             <p>
-            давайте запустим скомпилированную нами программу
+            Давайте запустим скомпилированную нами программу
             <source>
             [dima@myhost testproject1]$ java -cp ./target/classes ru.apache_maven.App
             Hello World!
@@ -90,10 +89,11 @@
                     <li>для среды IntelliJ Idea проект открывается сразу ("File/OpenProject")
                     </li>
                     <li>для среды NetBeans проект открывается сразу ("Файл/Создать проект/Проект maven с существующим POM")</li>
+                    <li>для eclipse нужно установить соответствующие плагин.</li>
                 </ul>
             </p>
         </section>
-        <section name="Установка в eclipse">
+        <section name="Установка плагина в eclipse">
             <p>
                 Для установки
                 <ol>
@@ -106,7 +106,7 @@
             <p>
                 После установки плагина можно:
                 <ul>
-                <li>создавать проекты например через File->New Progect->Maven->Maven Project</li>
+                <li>Создавать проекты через File->New Progect->Maven->Maven Project</li>
                 <li>Открыть существующий проект File->Import->Maven->Existing Maven Projects</li>
                 </ul>
             </p>

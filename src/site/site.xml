@@ -37,6 +37,7 @@
             <!-- <item name="Дополнительные настройки" href="optionalSettings.html"/> -->
             <item name="Профили" href="profiles.html"/>
             <item name="Веб-приложения" href="webapp.html"/>
+            <item name="Свойства" href="properties.html"/>
 
             <item name="Сравнение maven и ant" href="maven_vs_ant.html"/>
             <item name="Непрерывная интеграция" href="continuous-integration.html"/>
