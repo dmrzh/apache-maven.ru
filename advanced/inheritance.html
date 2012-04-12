@@ -22,7 +22,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>Руководство по Maven - 
-        maven-antrun-plugin</title>
+        project inheritance</title>
     <style type="text/css" media="all">
       @import url("../css/maven-base.css");
       @import url("../css/maven-theme.css");
@@ -171,8 +171,8 @@
           </li>
               
     <li class="none">
-              <strong>maven-antrun-plugin</strong>
-        </li>
+                    <a href="../plugins/maven-antrun-plugin.html">maven-antrun-plugin</a>
+          </li>
               
     <li class="none">
                     <a href="../plugins/maven-checkstyle-plugin.html">maven-checkstyle-plugin</a>
@@ -190,8 +190,8 @@
             <ul>
               
     <li class="none">
-                    <a href="../advanced/inheritance.html">наследование</a>
-          </li>
+              <strong>наследование</strong>
+        </li>
           </ul>
               <h5>дополнительно</h5>
             <ul>
@@ -291,46 +291,34 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       <div id="contentBox">
         
     
-        <div class="section"><h2>maven-antrun-plugin<a name="maven-antrun-plugin"></a></h2>
+        <div class="section"><h2>&#x41d;&#x430;&#x441;&#x43b;&#x435;&#x434;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;<a name="a"></a></h2>
+            <p>&#x41d;&#x430;&#x441;&#x43b;&#x435;&#x434;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43b;&#x44f;&#x435;&#x442; &#x438;&#x437;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c;&#x441;&#x44f; &#x43e;&#x442; &#x434;&#x443;&#x431;&#x43b;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x439;.</p>
             <p>
-                maven-antrun-plugin - &#x44d;&#x442;&#x43e; &#x43f;&#x43b;&#x430;&#x433;&#x438;&#x43d; &#x434;&#x43b;&#x44f; &#x437;&#x430;&#x43f;&#x443;&#x441;&#x43a;&#x430; <a class="externalLink" href="http://ant.apache.org/">Ant</a> &#x441;&#x43a;&#x440;&#x438;&#x43f;&#x442;&#x43e;&#x432;.
-                &#x415;&#x441;&#x43b;&#x438; &#x434;&#x43b;&#x44f; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x438; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; &#x43f;&#x43e;&#x434;&#x445;&#x43e;&#x434;&#x44f;&#x449;&#x435;&#x433;&#x43e; &#x43f;&#x43b;&#x430;&#x433;&#x438;&#x43d;&#x430; &#x43d;&#x435;&#x442;, &#x43d;&#x43e; &#x432;&#x44b; &#x437;&#x43d;&#x430;&#x435;&#x442;&#x435; &#x43a;&#x430;&#x43a; &#x435;&#x433;&#x43e; &#x441;&#x43e;&#x431;&#x440;&#x430;&#x442;&#x44c; &#x441; &#x43f;&#x43e;&#x43c;&#x43e;&#x449;&#x44c;&#x44e; ant
-                &#x442;&#x43e; &#x43c;&#x43e;&#x436;&#x43d;&#x43e; &#x432;&#x43e;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x44c;&#x441;&#x44f;  maven-antrun-plugin.
-                </p><div class="source"><pre>&lt;project&gt;
-  [...]
-  &lt;build&gt;
-    &lt;plugins&gt;
-      &lt;plugin&gt;
-        &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.6&lt;/version&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;phase&gt; &lt;!-- a lifecycle phase --&gt; &lt;/phase&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;run&lt;/goal&gt;
-            &lt;/goals&gt;
-            &lt;configuration&gt;
-              &lt;target&gt;
+                &#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x440;&#x430;&#x441;&#x441;&#x43c;&#x43e;&#x442;&#x440;&#x438;&#x43c; &#x43a;&#x430;&#x43a; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x43d;&#x430;&#x441;&#x43b;&#x435;&#x434;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x440;&#x438;&#x43e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435; maven &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x43e;&#x432;.
+                &#x41f;&#x440;&#x435;&#x434;&#x43f;&#x43e;&#x43b;&#x43e;&#x436;&#x438;&#x43c; &#x447;&#x442;&#x43e; &#x443; &#x43d;&#x430;&#x441; &#x43d;&#x435;&#x441;&#x43a;&#x43e;&#x43b;&#x44c;&#x43a;&#x43e; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x43e;&#x432; &#x438; &#x43c;&#x44b; &#x432; &#x43a;&#x430;&#x436;&#x434;&#x43e;&#x43c; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x443;&#x435;&#x43c; &#x431;&#x438;&#x431;&#x43b;&#x438;&#x43e;&#x442;&#x435;&#x43a;&#x443; log4j &#x434;&#x43b;&#x44f; &#x43b;&#x43e;&#x433;&#x433;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x440;&#x438;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x435;.
+            </p>
+            <p>
+                &#x421;&#x43d;&#x430;&#x447;&#x430;&#x43b;&#x430; &#x441;&#x43e;&#x437;&#x434;&#x430;&#x434;&#x438;&#x43c; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;-&#x43f;&#x440;&#x435;&#x434;&#x43e;&#x43a;. &#x412;&#x435;&#x441;&#x44c; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;-&#x43f;&#x440;&#x435;&#x434;&#x43e;&#x43a; &#x431;&#x443;&#x434;&#x435;&#x442; &#x441;&#x43e;&#x441;&#x442;&#x43e;&#x44f;&#x442;&#x44c; &#x438;&#x437; &#x43e;&#x434;&#x43d;&#x43e;&#x433;&#x43e; &#x444;&#x430;&#x439;&#x43b;&#x430; pom.xml
+                </p><div class="source"><pre>
 
-                &lt;!--
-                 &#x417;&#x434;&#x435;&#x441;&#x44c; &#x43c;&#x43e;&#x436;&#x43d;&#x43e; &#x440;&#x430;&#x441;&#x43f;&#x43e;&#x43b;&#x43e;&#x436;&#x438;&#x442;&#x44c; &#x43b;&#x44e;&#x431;&#x44b;&#x435; Ant &#x437;&#x430;&#x434;&#x430;&#x447;&#x438; -  &#x442;&#x43e;,
-                 &#x447;&#x442;&#x43e; &#x440;&#x430;&#x441;&#x43f;&#x43e;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x43e; &#x43c;&#x435;&#x436;&#x434;&#x443; &#x442;&#x44d;&#x433;&#x430;&#x43c;&#x438; &lt;target&gt; &#x438; &lt;/target&gt; &#x432; build.xml
-                --&gt;
-                 &lt;echo message=&quot;maven-antrun-plugin:run: hello world&quot;/&gt;
-
-              &lt;/target&gt;
-            &lt;/configuration&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
-  [...]
-&lt;/project&gt;  
+                &lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+                   xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                   xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0
+                   http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+                          &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+                          &lt;groupId&gt;ru.apache-maven&lt;/groupId&gt;
+                          &lt;artifactId&gt;parent&lt;/artifactId&gt;
+                          &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+                          &lt;packaging&gt;pom&lt;/packaging&gt;
+                  &lt;/project&gt;
+                
                 </pre></div>
             
 
+        </div>
 
+        <div class="section"><h2>project inheritance<a name="project_inheritance"></a></h2>
+             &#x446;&#x438;&#x43a;&#x43b;&#x438;&#x447; &#x437;&#x430;&#x432;&#x438;&#x441;&#x438;&#x43c;&#x43e;&#x441;&#x442;&#x438;
         </div>
     
 

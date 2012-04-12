@@ -22,7 +22,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>Руководство по Maven - 
-        Непрерывная интеграция</title>
+        Жизненный цикл проекта — Все фазы</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -132,8 +132,8 @@
           </li>
               
     <li class="none">
-              <strong>Непрерывная интеграция</strong>
-        </li>
+                    <a href="continuous-integration.html">Непрерывная интеграция</a>
+          </li>
               
     <li class="none">
                     <a href="faq.html">FAQ</a>
@@ -291,67 +291,147 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       <div id="contentBox">
         
     
-        <div class="section"><h2>&#x427;&#x442;&#x43e; &#x442;&#x430;&#x43a;&#x43e;&#x435; Continious Integration<a name="a__Continious_Integration"></a></h2>
-            <p>
-                &#x41d;&#x435;&#x43f;&#x440;&#x435;&#x440;&#x44b;&#x432;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x442;&#x435;&#x433;&#x440;&#x430;&#x446;&#x438;&#x44f; ( Continuous Integration, CI)- &#x44d;&#x442;&#x43e;
-                <li>&#x430;&#x432;&#x442;&#x43e;&#x43c;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x430;&#x44f; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x430; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; &#x438;&#x437; &#x438;&#x441;&#x445;&#x43e;&#x434;&#x43d;&#x43e;&#x433;&#x43e; &#x43a;&#x43e;&#x434;&#x430;,</li>
-
-                <li>&#x43f;&#x440;&#x438; &#x44d;&#x442;&#x43e;&#x43c; &#x434;&#x43e;&#x43f;&#x43e;&#x43b;&#x43d;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x43e; &#x432;&#x43e;&#x437;&#x43c;&#x43e;&#x436;&#x435;&#x43d; &#x437;&#x430;&#x43f;&#x443;&#x441;&#x43a; &#x430;&#x432;&#x442;&#x43e;&#x43c;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x445; &#x442;&#x435;&#x441;&#x442;&#x43e;&#x432;</li> (&#x441;&#x43c;.
-                <a class="externalLink" href="http://maven.apache.org/plugins/maven-surefire-plugin/">maven-surefire-plugin</a>,
-                <a class="externalLink" href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a>
-                )
-                <li>&#x43f;&#x440;&#x43e;&#x432;&#x435;&#x440;&#x43a;&#x430; &#x43a;&#x430;&#x447;&#x435;&#x441;&#x442;&#x432;&#x430; &#x43a;&#x43e;&#x434;&#x430;</li> (&#x441;&#x43c;.
-                <a href="plugins/maven-pmd-plugin.html">maven-pmd-plugin</a>,
-                <a href="plugins/maven-checkstyle-plugin.html">maven-checkstyle-plugin</a>
-                <a href="plugins/findbugs-maven-plugin.html">findbugs-maven-plugin</a> ),
-                <li>&#x440;&#x430;&#x437;&#x432;&#x451;&#x440;&#x442;&#x44b;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x440;&#x438;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x44f; &#x43d;&#x430; &#x442;&#x435;&#x441;&#x442;&#x43e;&#x432;&#x43e;&#x43c; &#x441;&#x435;&#x440;&#x432;&#x435;&#x440;&#x435; (&#x434;&#x43b;&#x44f; &#x441;&#x435;&#x440;&#x432;&#x435;&#x440;&#x43d;&#x44b;&#x445; &#x43f;&#x440;&#x438;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x439;).</li>
-
-                <br />
-                &#x421;&#x431;&#x43e;&#x440;&#x43a;&#x430; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; &#x43f;&#x440;&#x43e;&#x438;&#x441;&#x445;&#x43e;&#x434;&#x438;&#x438;&#x442; &#x43f;&#x440;&#x438; &#x438;&#x437;&#x43c;&#x435;&#x43d;&#x435;&#x43d;&#x438; &#x438;&#x441;&#x445;&#x43e;&#x434;&#x43d;&#x43e;&#x433;&#x43e; &#x43a;&#x43e;&#x434;&#x430; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430; &#x438;&#x43b;&#x438;/&#x438; &#x43f;&#x43e; &#x440;&#x430;&#x441;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x44e;.<br />
-                &#x412; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442;&#x435; &#x434;&#x43e;&#x441;&#x442;&#x438;&#x433;&#x430;&#x435;&#x442;&#x441;&#x44f;:
-                </p><ul>
-                    <li>
-                       &#x440;&#x430;&#x43d;&#x43d;&#x435;&#x435; &#x43e;&#x431;&#x43d;&#x430;&#x440;&#x443;&#x436;&#x435;&#x43d;&#x438;&#x435; &#x43e;&#x448;&#x438;&#x431;&#x43e;&#x43a;
-                    </li>
-                    <li>
-                       &#x430;&#x432;&#x442;&#x43e;&#x43c;&#x430;&#x442;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44f; &#x440;&#x443;&#x442;&#x438;&#x43d;&#x43d;&#x44b;&#x445; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x439;
-                    </li>
-                    <li>
-                       &#x43a;&#x430;&#x43a; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442; - &#x44d;&#x43a;&#x43e;&#x43d;&#x43e;&#x43c;&#x438;&#x44f; &#x432;&#x440;&#x435;&#x43c;&#x435;&#x43d;&#x438; &#x438; &#x43f;&#x43e;&#x432;&#x44b;&#x448;&#x435;&#x43d;&#x438;&#x435; &#x43a;&#x430;&#x447;&#x435;&#x441;&#x442;&#x432;&#x430; &#x43a;&#x43e;&#x434;&#x430;.
-                    </li>
-
-                </ul>
-                &#x41e;&#x441;&#x43e;&#x431;&#x435;&#x43d;&#x43d;&#x43e; &#x430;&#x43a;&#x442;&#x443;&#x430;&#x43b;&#x44c;&#x43d;&#x43e; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43d;&#x435;&#x43f;&#x440;&#x435;&#x440;&#x44b;&#x432;&#x43d;&#x43e;&#x439; &#x438;&#x43d;&#x442;&#x435;&#x433;&#x440;&#x430;&#x446;&#x438;&#x438; &#x435;&#x441;&#x43b;&#x438; &#x43d;&#x430;&#x434; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x43e;&#x43c; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x430;&#x435;&#x442; &#x43d;&#x435;&#x441;&#x43a;&#x43e;&#x43b;&#x44c;&#x43a;&#x43e; &#x447;&#x435;&#x43b;&#x43e;&#x432;&#x435;&#x43a; -
-                &#x441;&#x440;&#x430;&#x437;&#x443; &#x441;&#x442;&#x430;&#x43d;&#x43e;&#x432;&#x438;&#x442;&#x441;&#x44f; &#x43f;&#x43e;&#x43d;&#x44f;&#x442;&#x43d;&#x43e; &#x43a;&#x442;&#x43e;,&#x447;&#x442;&#x43e; &#x438; &#x43a;&#x43e;&#x433;&#x434;&#x430; &#x441;&#x43b;&#x43e;&#x43c;&#x430;&#x43b;.
-            
-            <!-- <img src="images/ci-server.gif" height="800px"/> -->
-            <p>
-
-                &#x41e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x43f;&#x440;&#x43e;&#x446;&#x435;&#x441;&#x441; &#x430;&#x432;&#x442;&#x43e;&#x43c;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x43e;&#x439; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x438; &#x43f;&#x440;&#x438;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x44f; &#x43d;&#x435; &#x442;&#x430;&#x43a; &#x443;&#x436; &#x441;&#x43b;&#x43e;&#x436;&#x43d;&#x43e; - &#x434;&#x43b;&#x44f; &#x44d;&#x442;&#x43e;&#x433;&#x43e; &#x441;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442; &#x43c;&#x43d;&#x43e;&#x436;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x433;&#x43e;&#x442;&#x43e;&#x432;&#x44b;&#x445; &#x43f;&#x440;&#x43e;&#x434;&#x443;&#x43a;&#x442;&#x43e;&#x432;:
-                </p><ul>
-                    <li><a class="externalLink" href="http://jenkins-ci.org/">Jenkins</a>/Hudson</li>
-                    <li><a class="externalLink" href="http://continuum.apache.org/">Continuum</a></li>
-                    <li><a class="externalLink" href="http://cruisecontrol.sourceforge.net/">CruiseControl</a></li>
-                    <li><a class="externalLink" href="http://www.jetbrains.com/teamcity/">Teamcity</a></li>
-                </ul>
-                &#x421;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x443;&#x44e;&#x442; &#x435;&#x449;&#x451; &#x43f;&#x440;&#x43e;&#x434;&#x443;&#x43a;&#x442;&#x44b;, &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x44b;&#x435; &#x43c;&#x435;&#x43d;&#x435;&#x435; &#x440;&#x430;&#x441;&#x43f;&#x440;&#x43e;&#x441;&#x442;&#x440;&#x430;&#x43d;&#x435;&#x43d;&#x44b;.
-            
+        <div class="section"><h2><a name="null"></a></h2>
+            &#x412; &#x433;&#x43b;&#x430;&#x432;&#x435;&#x425;&#x425;&#x425; &#x43c;&#x44b; &#x43e;&#x431;&#x441;&#x443;&#x436;&#x434;&#x430;&#x43b;&#x438; &#x441;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x43d;&#x44b;&#x445; &#x444;&#x430;&#x437; &#x43f;&#x43e; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x435; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430;.
         </div>
-        <div class="section"><h2>&#x421;&#x441;&#x44b;&#x43b;&#x43a;&#x438;<a name="a"></a></h2>
-            <p>
-                </p><ul>
-                    <li>
-                        <a class="externalLink" href="http://automated-testing.info/knowledgebase/article/zapusk-selenium-testov-s-pomoshhju-hudson-na-headless-linux-server-chast-1-xvf">
-                            &#x417;&#x430;&#x43f;&#x443;&#x441;&#x43a; Selenium &#x442;&#x435;&#x441;&#x442;&#x43e;&#x432; &#x441; &#x43f;&#x43e;&#x43c;&#x43e;&#x449;&#x44c;&#x44e; Hudson &#x43d;&#x430; Headless Linux Server
-                        </a>
-                    </li>
-                </ul>
-
-            
+        <div class="section"><h2>&#x416;&#x438;&#x437;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439; &#x446;&#x438;&#x43a;&#x43b; clean<a name="a__clean"></a></h2>
+            &#x416;&#x438;&#x437;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439; &#x446;&#x438;&#x43a;&#x43b; clean
+            pre-clean
+            &#x412;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x44f;&#x435;&#x442;&#x441;&#x44f; &#x43f;&#x435;&#x440;&#x435;&#x434; &#x442;&#x435;&#x43c; &#x43a;&#x430;&#x43a; &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x43e;&#x439;&#x434;&#x451;&#x442; &#x443;&#x434;&#x430;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x444;&#x430;&#x439;&#x43b;&#x43e;&#x432;
+            clean
+            &#x423;&#x434;&#x430;&#x43b;&#x44f;&#x435;&#x442; &#x432;&#x441;&#x435; &#x441;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x444;&#x430;&#x439;&#x43b;&#x44b; &#x441;&#x43e;&#x437;&#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x43d;&#x430; &#x434;&#x440;&#x443;&#x433;&#x438;&#x445; &#x444;&#x430;&#x437;&#x430;&#x445;
+            post-clean
+            &#x412;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x44f;&#x435;&#x442; &#x43f;&#x440;&#x43e;&#x446;&#x435;&#x441;&#x441;&#x44b; &#x43d;&#x443;&#x436;&#x43d;&#x44b;&#x435; &#x434;&#x43b;&#x44f; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43d;&#x438;&#x44f; &#x43e;&#x447;&#x438;&#x441;&#x442;&#x43a;&#x438; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430;
         </div>
+        <div class="section"><h2>&#x416;&#x438;&#x437;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439; &#x446;&#x438;&#x43a;&#x43b;  &#x43f;&#x43e; &#x443;&#x43c;&#x43e;&#x43b;&#x447;&#x430;&#x43d;&#x438;&#x44e;<a name="a____"></a></h2>
+            &#x416;&#x438;&#x437;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439; &#x446;&#x438;&#x43a;&#x43b;  &#x43f;&#x43e; &#x443;&#x43c;&#x43e;&#x43b;&#x447;&#x430;&#x43d;&#x438;&#x44e;
+            validate
+            &#x41f;&#x440;&#x43e;&#x432;&#x435;&#x440;&#x44f;&#x435;&#x442; &#x43f;&#x440;&#x430;&#x432;&#x438;&#x43b;&#x44c;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x43f;&#x440;&#x43e;&#x435;&#x43a;&#x442;&#x430;, &#x447;&#x442;&#x43e; &#x434;&#x43e;&#x441;&#x442;&#x443;&#x43f;&#x43d;&#x430; &#x432;&#x441;&#x44f; &#x43d;&#x435;&#x431;&#x445;&#x43e;&#x434;&#x438;&#x43c;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44f;.
+            validate the project is correct and all necessary information is available.
+            initialize
+            &#x418;&#x43d;&#x438;&#x446;&#x438;&#x430;&#x43b;&#x438;&#x437;&#x438;&#x440;&#x443;&#x435;&#x442;&#x441;&#x44f; &#x441;&#x431;&#x43e;&#x440;&#x43a;&#x430;: &#x443;&#x441;&#x442;&#x430;&#x43d;&#x430;&#x432;&#x43b;&#x438;&#x432;&#x430;&#x44e;&#x442;&#x441;&#x44f; &#x441;&#x432;&#x43e;&#x439;&#x441;&#x442;&#x432;&#x430;, &#x438; &#x441;&#x43e;&#x437;&#x434;&#x430;&#x44e;&#x442;&#x441;&#x44f; &#x434;&#x438;&#x440;&#x435;&#x43a;&#x442;&#x43e;&#x440;&#x438;&#x438;.
+            generate-sources
+            generate any source code for inclusion in compilation.
+            process-sources
+            process the source code, for example to filter any values.
+            generate-resources
+            generate resources for inclusion in the package.
+            process-resources
+            copy and process the resources into the destination directory, ready for packaging.
+            compile
+            compile the source code of the project.
+            process-classes
+            post-process the generated files from compilation, for example to do bytecode enhancement on Java classes.
+            generate-test-sources
+            generate any test source code for inclusion in compilation.
+            process-test-sources
+            process the test source code, for example to filter any values.
+            generate-test-resources
+            create resources for testing.
+            process-test-resources
+            copy and process the resources into the test destination directory.
+            test-compile
+            compile the test source code into the test destination directory
+            process-test-classes
+            post-process the generated files from test compilation, for example to do bytecode enhancement on Java classes. For Maven 2.0.5 and above.
+            test
+            run tests using a suitable unit testing framework. These tests should not require the code be packaged or deployed.
+            prepare-package
+            perform any operations necessary to prepare a package before the actual packaging. This often results in an unpacked, processed version of the package. (Maven 2.1 and above)
+            package
+            take the compiled code and package it in its distributable format, such as a JAR.
+            pre-integration-test
+            perform actions required before integration tests are executed. This may involve things such as setting up the required environment.
+            integration-test
+            process and deploy the package if necessary into an environment where integration tests can be run.
+            post-integration-test
+            perform actions required after integration tests have been executed. This may including cleaning up the environment.
+            verify
+            run any checks to verify the package is valid and meets quality criteria.
+            install
+            install the package into the local repository, for use as a dependency in other projects locally.
+            deploy
+            done in an integration or release environment, copies the final package to the remote repository for sharing with other developers and projects.
+        </div>
+        <div class="section"><h2>&#x416;&#x438;&#x437;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439; &#x446;&#x438;&#x43a;&#x43b;  site<a name="a___site"></a></h2>
 
-        
+            pre-site
+            executes processes needed prior to the actual project site generation
+            site
+            generates the project's site documentation
+            post-site
+            executes processes needed to finalize the site generation, and to prepare for site deployment
+            site-deploy
+            deploys the generated site documentation to the specified web server
+        </div>
+        <div class="section"><h2>Built-in Lifecycle Bindings<a name="Built-in_Lifecycle_Bindings"></a></h2>
+            Some phases have goals binded to them by default. And for the default lifecycle, these bindings depend on the packaging value. Here are some of the goal-to-build-phase bindings.
+            Clean Lifecycle Bindings
+            clean
+            clean:clean
+            Default Lifecycle Bindings - Packaging ejb / ejb3 / jar / par / rar / war
+            process-resources
+            resources:resources
+            compile
+            compiler:compile
+            process-test-resources
+            resources:testResources
+            test-compile
+            compiler:testCompile
+            test
+            surefire:test
+            package
+            ejb:ejb or ejb3:ejb3 or jar:jar or par:par or rar:rar or war:war
+            install
+            install:install
+            deploy
+            deploy:deploy
+            Default Lifecycle Bindings - Packaging ear
+            generate-resources
+            ear:generateApplicationXml
+            process-resources
+            resources:resources
+            package
+            ear:ear
+            install
+            install:install
+            deploy
+            deploy:deploy
+            Default Lifecycle Bindings - Packaging maven-plugin
+            generate-resources
+            plugin:descriptor
+            process-resources
+            resources:resources
+            compile
+            compiler:compile
+            process-test-resources
+            resources:testResources
+            test-compile
+            compiler:testCompile
+            test
+            surefire:test
+            package
+            jar:jar and plugin:addPluginArtifactMetadata
+            install
+            install:install and plugin:updateRegistry
+            deploy
+            deploy:deploy
+            Default Lifecycle Bindings - Packaging pom
+            package
+            site:attach-descriptor
+            install
+            install:install
+            deploy
+            deploy:deploy
+            Site Lifecycle Bindings
+            site
+            site:site
+            site-deploy
+            site:deploy
+
+        </div>
     
+
         <br/>
         <br/>
         <br/>
