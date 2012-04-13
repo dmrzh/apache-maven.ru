@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>project inheritance</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="наследование, inheritance, java, maven, здгпшт, plugin, плагин, ява, мавен, плагины, ьфмут"/>
+        <title>project inheritance</title>
+    </head>
+
+
+    <body>
+        <section name="Наследование">
+            <p>Наследование позволяет избавиться от дублирование описаний.</p>
+            <p>
+                Давайте рассмотрим как использовать наследование приописание maven проектов.
+                Предположим что у нас несколько проектов и мы в каждом используем библиотеку log4j для логгирование приложение.
+            </p>
+            <p>
+                Сначала создадим проект-предок. Весь проект-предок будет состоять из одного файла pom.xml
+                <source><![CDATA[
+
+                <project xmlns="http://maven.apache.org/POM/4.0.0"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                   http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                          <modelVersion>4.0.0</modelVersion>
+                          <groupId>ru.apache-maven</groupId>
+                          <artifactId>parent</artifactId>
+                          <version>1.0-SNAPSHOT</version>
+                          <packaging>pom</packaging>
+                  </project>
+                ]]>
+                </source>
+            </p>
+
+        </section>
+
+        <section name="project inheritance">
+             циклич зависимости
+        </section>
+    </body>
+
+</document>
+

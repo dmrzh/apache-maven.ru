@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>Жизненный цикл проекта — Все фазы</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="java, maven, pom.xml , phase, ява, мавен, lifecycle, жизненный цикл"/>
+        <title>Жизненный цикл проекта — Все фазы</title>
+    </head>
+
+
+    <body>
+        <section >
+            В главеХХХ мы обсуждали список основных фаз по сборке проекта.
+        </section>
+        <section name="Жизненный цикл clean">
+            Жизненный цикл clean
+            pre-clean
+            Выполняется перед тем как произойдёт удаление файлов
+            clean
+            Удаляет все сгенерированные файлы созданные на других фазах
+            post-clean
+            Выполняет процессы нужные для завершения очистки проекта
+        </section>
+        <section name="Жизненный цикл  по умолчанию">
+            Жизненный цикл  по умолчанию
+            validate
+            Проверяет правильность проекта, что доступна вся небходимая информация.
+            validate the project is correct and all necessary information is available.
+            initialize
+            Инициализируется сборка: устанавливаются свойства, и создаются директории.
+            generate-sources
+            generate any source code for inclusion in compilation.
+            process-sources
+            process the source code, for example to filter any values.
+            generate-resources
+            generate resources for inclusion in the package.
+            process-resources
+            copy and process the resources into the destination directory, ready for packaging.
+            compile
+            compile the source code of the project.
+            process-classes
+            post-process the generated files from compilation, for example to do bytecode enhancement on Java classes.
+            generate-test-sources
+            generate any test source code for inclusion in compilation.
+            process-test-sources
+            process the test source code, for example to filter any values.
+            generate-test-resources
+            create resources for testing.
+            process-test-resources
+            copy and process the resources into the test destination directory.
+            test-compile
+            compile the test source code into the test destination directory
+            process-test-classes
+            post-process the generated files from test compilation, for example to do bytecode enhancement on Java classes. For Maven 2.0.5 and above.
+            test
+            run tests using a suitable unit testing framework. These tests should not require the code be packaged or deployed.
+            prepare-package
+            perform any operations necessary to prepare a package before the actual packaging. This often results in an unpacked, processed version of the package. (Maven 2.1 and above)
+            package
+            take the compiled code and package it in its distributable format, such as a JAR.
+            pre-integration-test
+            perform actions required before integration tests are executed. This may involve things such as setting up the required environment.
+            integration-test
+            process and deploy the package if necessary into an environment where integration tests can be run.
+            post-integration-test
+            perform actions required after integration tests have been executed. This may including cleaning up the environment.
+            verify
+            run any checks to verify the package is valid and meets quality criteria.
+            install
+            install the package into the local repository, for use as a dependency in other projects locally.
+            deploy
+            done in an integration or release environment, copies the final package to the remote repository for sharing with other developers and projects.
+        </section>
+        <section name="Жизненный цикл  site">
+
+            pre-site
+            executes processes needed prior to the actual project site generation
+            site
+            generates the project's site documentation
+            post-site
+            executes processes needed to finalize the site generation, and to prepare for site deployment
+            site-deploy
+            deploys the generated site documentation to the specified web server
+        </section>
+        <section name="Built-in Lifecycle Bindings">
+            Some phases have goals binded to them by default. And for the default lifecycle, these bindings depend on the packaging value. Here are some of the goal-to-build-phase bindings.
+            Clean Lifecycle Bindings
+            clean
+            clean:clean
+            Default Lifecycle Bindings - Packaging ejb / ejb3 / jar / par / rar / war
+            process-resources
+            resources:resources
+            compile
+            compiler:compile
+            process-test-resources
+            resources:testResources
+            test-compile
+            compiler:testCompile
+            test
+            surefire:test
+            package
+            ejb:ejb or ejb3:ejb3 or jar:jar or par:par or rar:rar or war:war
+            install
+            install:install
+            deploy
+            deploy:deploy
+            Default Lifecycle Bindings - Packaging ear
+            generate-resources
+            ear:generateApplicationXml
+            process-resources
+            resources:resources
+            package
+            ear:ear
+            install
+            install:install
+            deploy
+            deploy:deploy
+            Default Lifecycle Bindings - Packaging maven-plugin
+            generate-resources
+            plugin:descriptor
+            process-resources
+            resources:resources
+            compile
+            compiler:compile
+            process-test-resources
+            resources:testResources
+            test-compile
+            compiler:testCompile
+            test
+            surefire:test
+            package
+            jar:jar and plugin:addPluginArtifactMetadata
+            install
+            install:install and plugin:updateRegistry
+            deploy
+            deploy:deploy
+            Default Lifecycle Bindings - Packaging pom
+            package
+            site:attach-descriptor
+            install
+            install:install
+            deploy
+            deploy:deploy
+            Site Lifecycle Bindings
+            site
+            site:site
+            site-deploy
+            site:deploy
+
+        </section>
+    </body>
+</document>
+
+
+

@@ -60,6 +60,10 @@
             <item name="maven-pmd-plugin"        href="plugins/maven-pmd-plugin.html"/>
             <item name="findbugs-maven-plugin"   href="plugins/findbugs-maven-plugin.html"/>
         </menu>
+        <menu name="advanced">
+            <item name="наследование"     href="advanced/inheritance.html"/>
+
+        </menu>
 
         <menu name="дополнительно">
             <item name="Форумы" href="http://forum.java7.ru/"/>
