@@ -3,13 +3,13 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
     <properties>
-        <title>project inheritance</title>
+        <title>Наследование проектов</title>
         <author>Ржевский Дмитрий</author>
     </properties>
 
     <head>
         <meta name="keyword" content="наследование, inheritance, java, maven, здгпшт, plugin, плагин, ява, мавен, плагины, ьфмут"/>
-        <title>project inheritance</title>
+        <title>Наследование проектов</title>
     </head>
 
 
@@ -32,17 +32,78 @@
                           <groupId>ru.apache-maven</groupId>
                           <artifactId>parent</artifactId>
                           <version>1.0-SNAPSHOT</version>
-                          <packaging>pom</packaging>
+                        ]]><b>&lt;packaging>pom&lt;/packaging></b><![CDATA[
                   </project>
                 ]]>
                 </source>
+                как вы заметили тэг  packaging содержит значение pom.
+                Теперь давайте внутри что-нибудь объявим. Например добавим
+                <source><![CDATA[
+                <dependencyes>
+                <dependency>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                    <version>1.2.16</version>
+                </dependency
+                ]]>
+                </source>
+                и установим в локальный репозиторий:
+                <source>
+                cd  parent
+                mvn install.
+                </source>
+                Если посмотреть список зависимостей, то он будет такой:
+                <source>
+                $ mvn dependency:tree
+                     \- log4j:log4j:jar:1.2.16:compile
+                </source>
+            </p>
+            <p>
+                Теперь можно создать один или несколько проекто-потомков:
+                <source><![CDATA[
+                <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                <modelVersion>4.0.0</modelVersion>
+
+                <!--<groupId>ru.apache_maven</groupId>-->
+                <artifactId>testproj1</artifactId>
+                <!--<version>1.0-SNAPSHOT</version>-->
+                <parent>
+                    <groupId>ru.apache_maven</groupId>
+                    <artifactId>parent</artifactId>
+                    <version>1.0-SNAPSHOT</version>
+                </parent>
+                <packaging>jar</packaging>
+
+                <dependencies>
+                </dependencies>
+            </project>
+            ]]>
+                </source>
+            Как видно в примере, мы объявили
+                первое на что стоит обратить внимание — это то что groupId и version закомментарены.
+                Они теперь необязательны и берутся по умолчанию такие же как и у parent проекта, хотя можно задать значения
+                и отличные от тех которые по умолчанию.
+            Второе и самое важное, если посмотреть список зависимойстей
+                <source>
+                    $ mvn dependency:tree
+                    \- log4j:log4j:jar:1.2.16:compile
+                </source>
+            то можно увидеть log4j, хотя мы в pom.xml проекта мы log4j  не объявляли. Он унаследовался от проекта-предка.
+                </p>
+            <p>
+            Кроме зависимостей в поректе-предке часто объявляют плагины:
+                <ul>
+                   <li>maven-compiler-plugin нужет в каждом проекте!</li>
+                    <li> properties</li>
+                    <li>репозитории</li>
+
+                </ul>
+                см. также секцию <a href="dependencyManagement.html">&lt;dependencyManagement></a>
             </p>
 
         </section>
 
-        <section name="project inheritance">
-             циклич зависимости
-        </section>
     </body>
 
 </document>

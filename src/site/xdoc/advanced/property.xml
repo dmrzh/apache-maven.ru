@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>Свойства</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="property, свойства ,переменные, java, maven, ява, мавен, ьфмут"/>
+        <title>Свойства</title>
+    </head>
+
+
+    <body>
+        <section name="Свойства">
+            <p>
+                Для того чтобы можно было легче писать и настраивать проект в pom.xml можно использовать свойства. Можно рассматривать свойства просто как переменные.
+            </p>
+            <p>
+                Есть:
+                <ol>
+                  <li>Переменные объявленные внутри pom.xml</li>
+                  <li>Предопределённые переменные.</li>
+                  <li>Переменные объявленные во внешнем файле</li>
+                </ol>
+            </p>
+        </section>
+        <section name="Переменные объявленные внутри pom.xml">
+            <p>
+                Давайте начнём с самого простого объявим свойства и сами будем их использовать.
+                Свойства можно объявить и использовать так:
+                <source>
+                    <![CDATA[
+    <properties>                             
+        <temp.directory>/tmp</temp.directory>
+    </properties>
+    <build>
+    <outputDirectory>${temp.directory}<outputDirectory>
+
+                    ]]>
+                </source>
+            </p>
+            <p>Свойства могу позволить избавиться от дублирования информации
+                В примере
+
+                <source>
+                    <![CDATA[
+        <properties>
+            <jetty.version>6.1.25</jetty.version>
+        </properties>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty</artifactId>
+            <version>${jetty.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty-util</artifactId>
+            <version>${jetty.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty-management</artifactId>
+            <version>${jetty.version}</version>
+            <scope>provided</scope>
+        </dependency>
+                            ]]>
+                </source>
+                использование свойства  jetty.version позволяет избавиться от дублирования и уменьшет вероятность ошибок при апгрейде.
+             </p>
+        </section>
+        <section name="Предопределёные переменные">
+            Предопределённые переменные можно разделить на несколько видов.
+            <p>
+                <b>Встроенные свойства</b>
+                <ul>
+                    <li>${basedir}</li> директория где лежит pom.xml
+                    <li>${version}</li> тоже самое что и ${project.version} или ${pom.version}
+                </ul>
+            </p>
+            <p>
+                <b>Свойства проекта</b>
+                На все свойства в pom.xml, можно сослаться с помощью  префиксов project. или pom.
+                Ниже приведёт пример некоторых часто используемых элементов.
+                <ul>
+                    <li>${project.build.directory}</li> ваша "target" директория,или тоже самое
+                    <li>${pom.project.build.directory}</li>
+                    <li>${project.build.outputDirectory}</li> путь к директории ккуда компилятор складывает файлыю по умолчанию  "target/classes"
+                    <li>${project.name}</li> или ${pom.name} имя Вашего проекта
+                    <li>${project.version}</li> или ${pom.version} версия Вашего проекта.
+                </ul>
+            </p>
+            <p>
+                <b>Настройки пользователя</b>
+                Можно получить доступ к свойствам settings.xml с помощью префикса settings. ,например:
+                <ul>
+                    <li>${settings.localRepository} путь к локальному репозиторию пользователя.</li>
+                </ul>
+            </p>
+            <p>
+                <b>Переменные окружения</b>
+                Для доступа к переменным окружения используйте пефикс env.
+                Примеры:
+                <ul>
+                <li>${env.M2_HOME}</li> путь .
+                <li>${java.home}</li> specifies the path to the current JRE_HOME environment use with relative paths to get for example:
+                    &lt;jvm>${java.home}../bin/java.exe&lt;/jvm>
+                </ul>
+            </p>
+            <p>
+                <b>Системные свойства System.properties</b>
+                Доступ к системным свойствам возможен напрямую.
+                Для для просмотра переменных можно воспользоваться maven-echo-plugin.
+            </p>
+        </section>
+        <section name="Переменные объявленные во внешнем файле">
+            Для того чтобы загрузить переменные из внешнего файла удобнее всего использовать maven-properties-plugin
+            Давайте рассмотрим его работу.
+
+            <source>
+                <![CDATA[
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>maven-properties-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>src/config/app.properties</file>
+                            </files>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+                            ]]>
+            </source>
+            В данном примере объвляется плагин, он отрабатывает на стадии  <a href="lifecycle-full.html">initialize</a> и загружает свойства из  src/config/app.properties.
+        </section>
+    </body>
+</document>
