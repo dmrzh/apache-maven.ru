@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>Жизненный цикл проекта — Все фазы</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="наследование, inheritance, java, maven, здгпшт, plugin, плагин, ява, мавен, плагины, ьфмут"/>
+        <title>Жизненный цикл проекта — Все фазы</title>
+    </head>
+
+
+    <body>
+        <section name="Жизненный цикл проекта">
+            см.:
+            <a href="http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference">
+                тут (на английском языке языке)
+            </a>
+
+        </section>
+    </body>
+</document>

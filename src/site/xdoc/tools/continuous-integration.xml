@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <properties>
+        <title>Непрерывная интеграция</title>
+        <author>Ржевский Дмитрий</author>
+    </properties>
+
+    <head>
+        <meta name="keyword" content="Continious Integration, автоматическая сборка, тесты, тестирование, junit"/>
+        <title>Непрерывная интеграция</title>
+    </head>
+
+
+    <body>
+        <section name="Что такое Continious Integration">
+            <p>
+                Непрерывная интеграция ( Continuous Integration, CI)- это
+                <li>автоматическая сборка проекта из исходного кода,</li>
+
+                <li>при этом дополнительно возможен запуск автоматических тестов</li> (см.
+                <a href="http://maven.apache.org/plugins/maven-surefire-plugin/">maven-surefire-plugin</a>,
+                <a href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a>
+                )
+                <li>проверка качества кода</li> (см.
+                <a href="plugins/maven-pmd-plugin.html">maven-pmd-plugin</a>,
+                <a href="plugins/maven-checkstyle-plugin.html">maven-checkstyle-plugin</a>
+                <a href="plugins/findbugs-maven-plugin.html">findbugs-maven-plugin</a> ),
+                <li>развёртывание приложения на тестовом сервере (для серверных приложений).</li>
+
+                <br/>
+                Сборка проекта происходиит при изменени исходного кода проекта или/и по расписанию.<br/>
+                В результате достигается:
+                <ul>
+                    <li>
+                       раннее обнаружение ошибок
+                    </li>
+                    <li>
+                       автоматизация рутинных операций
+                    </li>
+                    <li>
+                       как результат - экономия времени и повышение качества кода.
+                    </li>
+
+                </ul>
+                Особенно актуально использование непрерывной интеграции если над проектом работает несколько человек -
+                сразу становится понятно кто,что и когда сломал.
+            </p>
+            <!--<img src="images/ci-server.gif" height="800px"/>-->
+            <p>
+
+                Организовать процесс автоматической сборки приложения не так уж сложно - для этого существует множество готовых продуктов:
+                <ul>
+                    <li><a href="http://jenkins-ci.org/">Jenkins</a>/Hudson</li>
+                    <li><a href="http://continuum.apache.org/">Continuum</a></li>
+                    <li><a href="http://cruisecontrol.sourceforge.net/">CruiseControl</a></li>
+                    <li><a href="http://www.jetbrains.com/teamcity/">Teamcity</a></li>
+                </ul>
+                Существуют ещё продукты, которые менее распространены.
+            </p>
+        </section>
+        <section name="Ссылки">
+            <p>
+                <ul>
+                    <li>
+                        <a href="http://automated-testing.info/knowledgebase/article/zapusk-selenium-testov-s-pomoshhju-hudson-na-headless-linux-server-chast-1-xvf">
+                            Запуск Selenium тестов с помощью Hudson на Headless Linux Server
+                        </a>
+                    </li>
+                </ul>
+
+            </p>
+        </section>
+
+        </body>
+    </document>
