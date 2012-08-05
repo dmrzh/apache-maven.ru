@@ -59,7 +59,7 @@
         <section name="Создание веб проекта с нуля">
            <p>
                Разработка Веб-приложений
-               Создать Web Веб проект довольно просто- нужно добавить тэг  <![CDATA[<packagin>]]> внутри <![CDATA[<project>]]> и задать в качестве значения значение war:
+               Создать  веб-проект довольно просто- нужно добавить тэг  <![CDATA[<packagin>]]> внутри <![CDATA[<project>]]> и задать в качестве значения значение war:
                <source><pre><![CDATA[
                <project xmlns="http://maven.apache.org/POM/4.0.0"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
