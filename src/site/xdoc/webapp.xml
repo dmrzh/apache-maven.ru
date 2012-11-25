@@ -50,7 +50,7 @@
                 <ul>
                 <li>собрать с помошью mvn package </li> в результате в директории target образуется testwebapp.war, который можно деплоить в сервлет контейнер,
                     например в <a href="http://tomcat.apache.org/">Apache Tomcat</a>
-                 <li>запустить напрямую: <b>mvn tomcat:run</b></li> В этом случае запустится tomcat и приложение будет сразу доступно по адресу <a href="http://localhost:8080/testwebapp/">http://localhost:8080/testwebapp/</a>
+                 <li>запустить напрямую: <b>mvn tomcat:run</b></li> В этом случае запустится tomcat и приложение будет сразу доступно по адресу <a href="http://localhost:8080/webapptest/">http://localhost:8080/webapptest/</a>
                 </ul>
 
 

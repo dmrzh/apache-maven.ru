@@ -24,9 +24,9 @@
                 <a href="http://maven.apache.org/plugins/maven-failsafe-plugin/">maven-failsafe-plugin</a>
                 )
                 <li>проверка качества кода</li> (см.
-                <a href="plugins/maven-pmd-plugin.html">maven-pmd-plugin</a>,
-                <a href="plugins/maven-checkstyle-plugin.html">maven-checkstyle-plugin</a>
-                <a href="plugins/findbugs-maven-plugin.html">findbugs-maven-plugin</a> ),
+                <a href="../plugins/maven-pmd-plugin.html">maven-pmd-plugin</a>,
+                <a href="../plugins/maven-checkstyle-plugin.html">maven-checkstyle-plugin</a>
+                <a href="../plugins/findbugs-maven-plugin.html">findbugs-maven-plugin</a> ),
                 <li>развёртывание приложения на тестовом сервере (для серверных приложений).</li>
 
                 <br/>
