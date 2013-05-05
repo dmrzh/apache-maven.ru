@@ -20,7 +20,7 @@
 
             По умолчанию отчёты сохраняются в ${basedir}/target/surefire-reports и находятся в двух форматах - txt  и xml.
 
-            maven-surefire-plugin содердит единственную цель surefire:test
+            maven-surefire-plugin содерджит единственную цель surefire:test
 
             тесты можно писать используя как <a href="http://www.junit.org/">JUnit</a> так и <a href="http://testng.org">TestNG</a>.
             </p>

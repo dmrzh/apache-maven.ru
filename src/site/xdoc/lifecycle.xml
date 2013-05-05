@@ -3,13 +3,13 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
     <properties>
-        <title>жизненый цикл сборки: фазы сборки</title>
+        <title>жизненный цикл сборки: фазы сборки</title>
         <author>Ржевский Дмитрий</author>
     </properties>
 
     <head>
         <meta name="keyword" content="java, maven, ant, about, ява, мавен"/>
-        <title>жизненый цикл сборки: фазы сборки</title>
+        <title>жизненный цикл сборки: фазы сборки</title>
     </head>
 
 
@@ -33,7 +33,7 @@
                 Если набрать  <source>mvn deploy</source> то выполнятся все приведённые выше фазы.
             </p>
             <p>
-                Особняком стоят фазы  <b>clean</b> и <b>site</b>.Они не выполняются если специально не указаы в строке запуска.
+                Особняком стоят фазы  <b>clean</b> и <b>site</b>. Они не выполняются если специально не указаны в строке запуска.
                 <ul>
                     <li>clean</li>удаление всех созданных в процессе сборки артефактов: .class, .jar и др. файлов.
                     В простейшем случае результат — просто удаление каталога target
