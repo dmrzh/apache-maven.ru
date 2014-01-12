@@ -38,7 +38,7 @@
         </section>
         <section name="Объявление плагина в pom.xml">
          <p>Объявление плагина похоже на объявление зависимости. Также, как и зависимости плагины идентифицируется
-            с помошью GAV(groupId,artifactId,version). Например:<br/>
+            с помощью GAV(groupId,artifactId,version). Например:<br/>
         <source><![CDATA[<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-checkstyle-plugin</artifactId>

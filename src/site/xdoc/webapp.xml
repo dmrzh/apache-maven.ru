@@ -90,7 +90,7 @@
             Для дальнейшей работы с веб-приложениями советую прочитать:
             <ul>
             <li><a href="http://maven.apache.org/plugins/maven-war-plugin/">maven-war-plugin</a></li>
-            <li><a href="http://mojo.codehaus.org/tomcat-maven-plugin/introduction.html">maven-tomcat-plugin</a></li>
+            <li><a href="http://tomcat.apache.org/maven-plugin-2.2/index.html">maven-tomcat-plugin</a></li>
             <li><a href="http://docs.codehaus.org/display/JETTY/Maven+Jetty+Plugin">maven-jetty-plugin</a></li>
             </ul>
         </section>

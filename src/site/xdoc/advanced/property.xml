@@ -89,7 +89,7 @@
                 <ul>
                     <li>${project.build.directory}</li> ваша "target" директория,или тоже самое
                     <li>${pom.project.build.directory}</li>
-                    <li>${project.build.outputDirectory}</li> путь к директории ккуда компилятор складывает файлыю по умолчанию  "target/classes"
+                    <li>${project.build.outputDirectory}</li> путь к директории куда компилятор складывает файлы по умолчанию  "target/classes"
                     <li>${project.name}</li> или ${pom.name} имя Вашего проекта
                     <li>${project.version}</li> или ${pom.version} версия Вашего проекта.
                 </ul>
