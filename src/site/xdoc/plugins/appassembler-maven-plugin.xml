@@ -18,9 +18,11 @@
         <section name="appassembler-maven-plugin - плагин для сборки дистрибутива.">
             <p>
                 Этот плагин позволяет:
-                    создать дистрибутив приложения
-                создать скрипты для запуска приложения под Linux, Windows
-                создать скрипты для запуска сервиса под Linux, Windows
+                <ul>
+                <li>создать дистрибутив приложения</li>
+                <li>создать скрипты для запуска приложения под Linux, Windows </li>
+                <li>создать скрипты для запуска сервисов под Linux, Windows</li>
+                </ul>
 
             </p>
         </section>
@@ -59,8 +61,10 @@
                 </configuration>
             </plugin>
             ]]></source>
-                Объявление плагина в pom.xml позволяет зафиксировать версию плагина, задать ему необходимые параметры, привязать к фазам.
             </p>
+        </section>
+        <section name="Ссылки">
+            <a href="http://mojo.codehaus.org/appassembler/appassembler-maven-plugin/">Официальный сайт плагина</a>.
         </section>
 
 

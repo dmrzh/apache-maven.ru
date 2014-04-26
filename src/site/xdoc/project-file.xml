@@ -127,6 +127,8 @@
      <source>
           <![CDATA[
          <build>
+         <outputDirectory>target2</outputDirectory>
+          <finalName>ROOT</finalName>
          <sourceDirectory>src/java</sourceDirectory>
             <resources>
                 <resource>
