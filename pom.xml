@@ -8,6 +8,9 @@
     <version>1.0-SNAPSHOT</version>
     <url>http://www.apache-maven.ru/</url>
     <description>Documentation of maven build system in russian language.</description>
+    <properties>
+        <outputEncoding>UTF-8</outputEncoding>
+    </properties>
 
     <dependencies>
 
@@ -27,6 +30,7 @@
                 <version>3.3</version>
                 <configuration>
                     <outputEncoding>UTF-8</outputEncoding>
+                    <inputEncoding>UTF-8</inputEncoding>
                 </configuration>
             </plugin>
             <plugin>
