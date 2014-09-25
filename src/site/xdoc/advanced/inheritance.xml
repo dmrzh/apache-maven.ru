@@ -39,7 +39,7 @@
                 как вы заметили тэг  packaging содержит значение pom.
                 Теперь давайте внутри что-нибудь объявим. Например добавим
                 <source><![CDATA[
-                <dependencyes>
+                <dependencies>
                 <dependency>
                     <groupId>log4j</groupId>
                     <artifactId>log4j</artifactId>
@@ -59,7 +59,7 @@
                 </source>
             </p>
             <p>
-                Теперь можно создать один или несколько проекто-потомков:
+                Теперь можно создать один или несколько проектов-потомков:
                 <source><![CDATA[
                 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -81,7 +81,7 @@
             ]]>
                 </source>
             Как видно в примере, мы объявили
-                первое на что стоит обратить внимание — это то что groupId и version закомментарены.
+                первое на что стоит обратить внимание — это то что groupId и version закомментированы.
                 Они теперь необязательны и берутся по умолчанию такие же как и у parent проекта, хотя можно задать значения
                 и отличные от тех которые по умолчанию.
             Второе и самое важное, если посмотреть список зависимойстей
