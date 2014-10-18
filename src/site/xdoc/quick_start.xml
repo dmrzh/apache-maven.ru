@@ -67,7 +67,7 @@
                 то компиляция  прошла успешно и в созданной директории target/classes будут class файлы c нашей программой.
             </p>
             <p>
-                Если вы наберёте mvn package в директории target будет создан jar файл testproject1-1.0-SNAPSHOT.jar
+                Если вы наберёте mvn package, в директории target будет создан jar файл testproject1-1.0-SNAPSHOT.jar
             </p>
             <p>
             Давайте запустим скомпилированную нами программу
