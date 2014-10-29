@@ -44,12 +44,12 @@
                                 |-- main
                                 |   `-- java
                                 |       `--ru
-                                |           `-- ru.apache_maven
+                                |           `-- apache_maven
                                 |                   `-- App.java
                                 `-- test
                                     `-- java
                                         `-- ru
-                                            `-- ru.apache_maven
+                                            `-- apache_maven
                                                     `-- AppTest.java
         </pre>
             </p>
@@ -58,7 +58,7 @@
                 pom.xml - это как раз файл для maven. Его мы будем рассматривать отдельно <a href="project-file.html">более подробно</a>.
             </p>
             <p>
-                Чтобы скомпилировать, нужно набрать  в консоли mvn compile. Если в консоль выведется
+                Чтобы скомпилировать, нужно перейти в директорию проекта testproject1 и набрать  в консоли mvn compile. Если в консоль выведется
                 <source>
                     ...
                     [INFO] BUILD SUCCESS
