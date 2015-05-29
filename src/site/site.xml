@@ -33,7 +33,7 @@
 
             <!--<item name="Управление зависимостями" href="dependencyManagement.html"/>-->
             <item name="Репозиторий" href="repository.html"/>
-            <item name="Жизненый цикл сборки: фазы сборки" href="lifecycle.html"/>
+            <item name="Жизненный цикл сборки: фазы сборки" href="lifecycle.html"/>
             <!-- <item name="Дополнительные настройки" href="optionalSettings.html"/> -->
             <item name="Профили" href="profiles.html"/>
             <item name="Веб-приложения" href="webapp.html"/>
@@ -68,7 +68,6 @@
         </menu>
 
         <menu name="дополнительно">
-            <item name="Форумы" href="http://forum.java7.ru/"/>
             <item name="Ссылки" href="links.html"/>
         </menu>
     </body>
