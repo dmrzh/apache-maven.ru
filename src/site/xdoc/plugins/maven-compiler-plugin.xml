@@ -53,7 +53,7 @@
                     <li>maxmem</li>
                     <li>debug</li>
                     <li>compilerArgument</li>задать аргуметы в одной коммандной строке-verbose -bootclasspath ${java.home}\lib\rt.jar
-                    <li>compilerArguments</li>  задать аргуметы в коммандной строки пораздельно в тегах verbose, bootclasspath и др.
+                    <li>compilerArguments</li>  задать аргуметы в коммандной строке пораздельно в тегах verbose, bootclasspath и др.
                     <li>compilerId</li> позволяет задать язык программирования исходного кода,  например csharp
 
             </ul>
