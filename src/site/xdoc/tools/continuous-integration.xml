@@ -8,13 +8,13 @@
     </properties>
 
     <head>
-        <meta name="keyword" content="Continious Integration, автоматическая сборка, тесты, тестирование, junit"/>
+        <meta name="keyword" content="Continuous Integration, автоматическая сборка, тесты, тестирование, junit"/>
         <title>Непрерывная интеграция</title>
     </head>
 
 
     <body>
-        <section name="Что такое Continious Integration">
+        <section name="Что такое Continuous Integration">
             <p>
                 Непрерывная интеграция ( Continuous Integration, CI)- это
                 <li>автоматическая сборка проекта из исходного кода,</li>
