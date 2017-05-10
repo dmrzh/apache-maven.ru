@@ -94,7 +94,7 @@
             <p>
             Кроме зависимостей в проекте-предке часто объявляют плагины:
                 <ul>
-                   <li>maven-compiler-plugin нужет в каждом проекте!</li>
+                   <li>maven-compiler-plugin нужен в каждом проекте!</li>
                     <li> properties</li>
                     <li>репозитории</li>
 

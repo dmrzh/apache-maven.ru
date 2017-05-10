@@ -143,7 +143,7 @@
             </plugin>
                             ]]>
             </source>
-            В данном примере объвляется плагин, он отрабатывает на стадии  <a href="lifecycle-full.html">initialize</a> и загружает свойства из  src/config/app.properties.
+            В данном примере объявляется плагин, он отрабатывает на стадии  <a href="lifecycle-full.html">initialize</a> и загружает свойства из  src/config/app.properties.
         </section>
     </body>
 </document>
